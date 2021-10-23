@@ -1,5 +1,9 @@
 @import "../src/assets/utilities/variables";
 
+@font-face {
+  font-family: "Main";
+  src: url(./assets/fonts/ZenKurenaido-Regular.ttf);
+}
 body {
   background-color: $main;
   padding-left: 1vw;
