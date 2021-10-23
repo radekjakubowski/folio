@@ -1,0 +1,30 @@
+@import "../assets/utilities/variables";
+
+.main {
+  display: grid;
+  height: 98vh;
+  width: 100%;
+  background-color: $main;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+  "hello hello sth sth"
+  "hello hello sth sth"
+  "menu menu menu menu"
+  "menu menu menu menu";
+
+  .hello {
+    grid-area: hello;
+    background-color: $secondary-main;
+  }
+
+  .sth {
+    grid-area: sth;
+    background-color: $warm;
+  }
+
+  .menu {
+    grid-area: menu;
+    background-color: $cold;
+  }
+}
