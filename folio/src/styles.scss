@@ -7,8 +7,8 @@
 
 body {
   background-color: $cold;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
 
   @media (max-width: #{$mobile-width}) {
     padding-right: 5vw;

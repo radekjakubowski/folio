@@ -10,6 +10,11 @@
     font-family: 'Main';
     font-size: large;
     color: $warm;
+
+    @media (max-width: #{$mobile-width}) {
+      font-size: smaller;
+    }
+
   }
 
   .photo {
@@ -25,6 +30,11 @@
       max-height: 90%;
       max-width: 90%;
       transition: 500ms;
+
+      @media (max-width: #{$mobile-width}) {
+        max-height: 70%;
+        max-width: 70%;
+      }
 
       &:hover {
         transform: rotateY(360deg);
@@ -42,15 +52,20 @@
 
     .button {
       margin: 5% 5% 5% 5%;
-      height: 15vh;
+      height: 10vh;
       width: 15vw;
-      line-height: 15vh;
+      line-height: 10vh;
       text-align: center;
       font-family: 'Main';
       font-size: x-large;
       color: $warm;
       border: 1px solid $warm;
       transition: 200ms;
+
+      @media (max-width: #{$mobile-width}) {
+        font-size: medium;
+        min-width: fit-content;
+      }
 
       &:hover {
         transition: background-color 200ms ease-in-out, font-weight 0ms ease-in-out;
