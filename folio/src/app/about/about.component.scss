@@ -1,0 +1,34 @@
+@import "../../assets/utilities/variables";
+
+.main {
+  grid-template-areas:
+  "stats stats desc1 desc1"
+  "stats stats desc1 desc1"
+  "desc2 desc2 exp exp"
+  "desc2 desc2 exp exp";
+  font-family: 'Main';
+  font-size: large;
+
+  .desc {
+    grid-area: desc1;
+    color: $warm;
+    padding: 5vw;
+    max-width: fit-content;
+
+    @media (max-width: #{$mobile-width}) {
+      font-size: small;
+    }
+  }
+
+  .desc2 {
+    grid-area: desc2;
+  }
+
+  .stats {
+    grid-area: stats;
+  }
+
+  .exp {
+    grid-area: exp;
+  }
+}
