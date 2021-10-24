@@ -10,6 +10,7 @@
     font-family: 'Main';
     font-size: large;
     color: $warm;
+    text-shadow: 2px 2px $secondary-main;
 
     @media (max-width: #{$mobile-width}) {
       font-size: smaller;
@@ -49,6 +50,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 5vh;
 
     .button {
       margin: 5% 5% 5% 5%;
