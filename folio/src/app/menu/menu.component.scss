@@ -1,0 +1,63 @@
+@import "../../assets/utilities/variables";
+
+.main {
+  .hello {
+    grid-area: hello;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Main';
+    font-size: large;
+    color: $warm;
+  }
+
+  .photo {
+    grid-area: photo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .profile-picture {
+      margin-top: 2vh;
+      border-radius: 50%;
+      box-shadow: 0px 0px 50px $warm;
+      max-height: 90%;
+      max-width: 90%;
+      transition: 500ms;
+
+      &:hover {
+        transform: rotateY(360deg);
+        transition: transform 500ms ease-in-out;
+      }
+    }
+  }
+
+  .menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .button {
+      margin: 5% 5% 5% 5%;
+      height: 15vh;
+      width: 15vw;
+      line-height: 15vh;
+      text-align: center;
+      font-family: 'Main';
+      font-size: x-large;
+      color: $warm;
+      border: 1px solid $warm;
+      transition: 200ms;
+
+      &:hover {
+        transition: background-color 200ms ease-in-out, font-weight 0ms ease-in-out;
+        background-color: $secondary-main;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -4,8 +4,31 @@
   font-family: "Main";
   src: url(./assets/fonts/ZenKurenaido-Regular.ttf);
 }
+
 body {
+  background-color: $cold;
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+.main {
+  display: grid;
   background-color: $main;
-  padding-left: 1vw;
-  padding-right: 1vw;
+  height: 98vh;
+  width: 100%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+  "hello hello photo photo"
+  "hello hello photo photo"
+  "menu menu menu menu"
+  "menu menu menu menu";
+
+  @media (max-width: #{$mobile-width}) {
+    grid-template-areas:
+    "photo photo photo photo"
+    "photo photo photo photo"
+    "hello hello hello hello"
+    "menu menu menu menu";
+  }
 }
