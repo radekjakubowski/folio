@@ -1,0 +1,44 @@
+@import "../../assets/utilities/variables";
+
+.wrap {
+    height: 80%;
+    width: 80%;
+    border: 5px double $secondary-main;
+    padding: 2vw;
+    margin-left: 1vw;
+    transition-duration: 200ms;
+
+    &:hover {
+        border-color: $cold;
+        transform: scale(1.05);
+        transition: all 200ms ease-in-out;
+    }
+
+
+    @media (max-width: #{$mobile-width}) {
+        margin-left: 3vw;
+      }
+
+    .stat {
+        margin-bottom: 5vh;
+    
+        .name {
+            color: $cold;
+            font-size: x-large;
+            margin-right: 5px;
+
+            @media (max-width: #{$mobile-width}) {
+                font-size: medium;
+              }
+        }
+    
+        .value {
+            font-size: large;
+            color: $secondary-main;
+
+            @media (max-width: #{$mobile-width}) {
+                font-size: small;
+              }
+        }
+    }
+}
