@@ -26,8 +26,8 @@
 
     .profile-picture {
       margin-top: 2vh;
-      border: 10px double $cold;
-      box-shadow: 0px 0px 5em $cold;
+      border-radius: 50%;
+      box-shadow: 0px 0px 1em 1em $cold;
       max-height: 90%;
       max-width: 90%;
       transition: 500ms;
