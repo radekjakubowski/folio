@@ -1,0 +1,35 @@
+@import "../../assets/utilities/variables";
+
+.step-info {
+    display: flex;
+    margin-right: 1vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    color: $cold;
+    transition-duration: 200ms;
+    border: 5px double $secondary-main;
+    padding: 5vw;
+
+    &:hover {
+      border-color: $cold;
+      transform: scale(1.05);
+      transition: all 200ms ease-in-out;
+  }
+
+    @media (max-width: #{$mobile-width}) {
+        font-size: small;
+      }
+
+    .company-logo {
+        img {
+            max-width: 10em;
+            max-height: 10em;
+        }
+    }
+
+    p {
+        margin-bottom: 2em;
+    }
+}

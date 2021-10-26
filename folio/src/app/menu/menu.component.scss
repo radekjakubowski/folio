@@ -26,8 +26,8 @@
 
     .profile-picture {
       margin-top: 2vh;
-      border-radius: 50%;
-      box-shadow: 0px 0px 50px $warm;
+      border: 10px double $cold;
+      box-shadow: 0px 0px 5em $cold;
       max-height: 90%;
       max-width: 90%;
       transition: 500ms;
@@ -38,7 +38,7 @@
       }
 
       &:hover {
-        transform: rotateY(360deg);
+        transform: scale(1.05);
         transition: transform 500ms ease-in-out;
       }
     }
@@ -55,7 +55,7 @@
     .button {
       margin: 5% 5% 5% 5%;
       height: 10vh;
-      width: 15vw;
+      width: 15em;
       line-height: 10vh;
       text-align: center;
       font-family: 'Main';

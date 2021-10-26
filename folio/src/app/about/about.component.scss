@@ -14,7 +14,7 @@
     color: $warm;
     padding: 5vw;
     max-width: fit-content;
-    line-height: 4vh;
+    line-height: 2em;
 
     &::first-letter {
       font-size: xx-large;
@@ -37,6 +37,40 @@
   }
 
   .exp {
+    padding: 2vw;
+    color: $cold;
     grid-area: exp;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 200ms;
+
+    h2 {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: x-large;
+
+      @media (max-width: #{$mobile-width}) {
+        font-size: medium;
+      }
+    }
+
+    .full-experience-link {
+      color: $secondary-main;
+      text-decoration: underline;
+      margin-top: 1em;
+      font-size: smaller;
+
+      &:hover {
+        cursor: pointer;
+        color: $cold;
+      }
+
+      @media (max-width: #{$mobile-width}) {
+        font-size: x-small;
+      }
+    }
   }
 }

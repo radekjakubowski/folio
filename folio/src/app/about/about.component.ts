@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataProviderService } from '../data-provider.service';
+import { ExperienceStep } from '../models/experience-step';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataProvider: DataProviderService) { }
 
   ngOnInit(): void {
   }
 
+  public getCurrentExperienceStep(): ExperienceStep {
+    return this.dataProvider.getExperienceSteps().find(step => step.monthTo === '')!;
+  }
 }
