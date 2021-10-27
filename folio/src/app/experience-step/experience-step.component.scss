@@ -24,8 +24,8 @@
 
     .company-logo {
         img {
-            max-width: 10em;
-            max-height: 10em;
+            max-width: 100%;
+            object-fit: contain;
         }
     }
 

@@ -20,12 +20,13 @@
       }
 
     .stat {
+        display: flex;
+        flex-direction: column;
         margin-bottom: 5vh;
     
         .name {
             color: $cold;
             font-size: x-large;
-            margin-right: 5px;
 
             @media (max-width: #{$mobile-width}) {
                 font-size: medium;

@@ -25,21 +25,17 @@
     justify-content: center;
 
     .profile-picture {
+      background-color: $secondary-main;
       margin-top: 2vh;
       border-radius: 50%;
       box-shadow: 0px 0px 1em 1em $cold;
       max-height: 90%;
       max-width: 90%;
-      transition: 500ms;
+      animation: float 6s ease-in-out infinite;
 
       @media (max-width: #{$mobile-width}) {
         max-height: 70%;
         max-width: 70%;
-      }
-
-      &:hover {
-        transform: scale(1.05);
-        transition: transform 500ms ease-in-out;
       }
     }
   }
@@ -75,6 +71,21 @@
         font-weight: bold;
         cursor: pointer;
       }
+    }
+  }
+
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-5px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
     }
   }
 }
