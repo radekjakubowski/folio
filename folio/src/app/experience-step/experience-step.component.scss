@@ -2,10 +2,11 @@
 
 .step-info {
     display: flex;
-    margin-right: 1vw;
+    margin-left: 1vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-size: large;
     color: $cold;
     transition-duration: 200ms;
@@ -23,6 +24,10 @@
       }
 
     .company-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         img {
             max-width: 100%;
             object-fit: contain;

@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
 import { StatsComponent } from './stats/stats.component';
 import { ExperienceStepComponent } from './experience-step/experience-step.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ExperienceStepComponent } from './experience-step/experience-step.compo
     ContactComponent,
     MenuComponent,
     StatsComponent,
-    ExperienceStepComponent
+    ExperienceStepComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

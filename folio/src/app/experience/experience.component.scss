@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Main';
+
+    .experience-step {
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
