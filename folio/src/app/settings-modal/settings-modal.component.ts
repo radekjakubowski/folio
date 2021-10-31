@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings-modal.component.scss']
 })
 export class SettingsModalComponent implements OnInit {
-  public currentLanguage: string = 'pl';
+  public currentLanguage: string;
 
   constructor(private utilitiesService: UtilitiesService) { }
 
   ngOnInit(): void {
+    this.currentLanguage = localStorage.getItem('folio-lang') || 'pl';
   }
 
   public closeModal(): void {
@@ -19,7 +20,8 @@ export class SettingsModalComponent implements OnInit {
   }
 
   public setLanguage(lang: string): void {
+    localStorage.setItem('folio-lang', lang);
     this.currentLanguage = lang;
-    //to implement
+    window.location.reload();
   }
 }

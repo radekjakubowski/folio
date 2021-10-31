@@ -1,7 +1,7 @@
 <div class="wrap">
     <div class='stat' *ngFor="let stat of stats">
-        <span class='name'>{{ stat.name }}:</span>
-        <span class='value'>{{stat.value}} {{stat.unit}}</span>
+        <span class='name'>{{ stat.name | translate }}:</span>
+        <span class='value'>{{ stat.value.toString() | translate }}</span>
     </div>
 </div>
 

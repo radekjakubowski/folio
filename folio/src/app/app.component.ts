@@ -1,6 +1,7 @@
 import { UtilitiesService } from './utilities.service';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { interval } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,9 @@ export class AppComponent implements OnInit {
   public currentColour: string = '';
   title = 'Radosław Jakubowski';
 
-  constructor(public utilitiesService: UtilitiesService) {
+  constructor(public utilitiesService: UtilitiesService, private translateService: TranslateService) {
+    this.translateService.setDefaultLang('pl');
+    this.translateService.use(localStorage.getItem('folio-lang') || 'pl');
   }
 
   ngOnInit(): void {

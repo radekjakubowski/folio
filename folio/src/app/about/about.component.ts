@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
 import { DataProviderService } from '../data-provider.service';
 import { ExperienceStep } from '../models/experience-step';
@@ -9,7 +10,7 @@ import { ExperienceStep } from '../models/experience-step';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private dataProvider: DataProviderService) { }
+  constructor(private dataProvider: DataProviderService, public translateService: TranslateService) { }
 
   ngOnInit(): void {
   }

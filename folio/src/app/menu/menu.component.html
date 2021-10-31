@@ -3,22 +3,22 @@
     <app-settings-bar></app-settings-bar>
   </div>
   <div class="hello">
-    <h1>Cześć!</h1>
-    <h2>Mam na imię Radek.</h2>
-    <h2>Miło Cię poznać!</h2>
+    <h1>{{ 'Cześć' | translate }}!</h1>
+    <h2>{{ 'Mam na imię' | translate }} Radek.</h2>
+    <h2>{{'Miło Cię poznać' | translate }}!</h2>
   </div>
   <div class="photo">
     <img src="../assets/img/pic.png" alt="" class="profile-picture">
   </div>
   <div class="menu">
     <div class="button about" [routerLink]="['/about']" routerLinkActive="router-link-active" >
-      O mnie
+      {{'O mnie' | translate }}
     </div>
     <div class="button techs" [routerLink]="['/technologies']" routerLinkActive="router-link-active">
-      Technologie
+      {{'Technologie' | translate }}
     </div>
     <div class="button contact" [routerLink]="['/contact']" routerLinkActive="router-link-active">
-      Kontakt
+      {{ 'Kontakt' | translate }}
     </div>
   </div>
 </div>
