@@ -2,12 +2,17 @@
 
 .main {
   grid-template-areas:
+  "settings settings settings settings"
   "stats stats desc1 desc1"
   "stats stats desc1 desc1"
   "desc2 desc2 exp exp"
   "desc2 desc2 exp exp";
   font-family: 'Main';
   font-size: large;
+
+  .settings {
+    grid-area: settings;
+  }
 
   .desc {
     grid-area: desc1;

@@ -10,6 +10,7 @@ import { MenuComponent } from './menu/menu.component';
 import { StatsComponent } from './stats/stats.component';
 import { ExperienceStepComponent } from './experience-step/experience-step.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { SettingsBarComponent } from './settings-bar/settings-bar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ExperienceComponent } from './experience/experience.component';
     MenuComponent,
     StatsComponent,
     ExperienceStepComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    SettingsBarComponent
   ],
   imports: [
     BrowserModule,

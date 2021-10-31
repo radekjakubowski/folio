@@ -17,6 +17,7 @@
       border-color: $cold;
       transform: scale(1.05);
       transition: all 200ms ease-in-out;
+      cursor: pointer;
   }
 
     @media (max-width: #{$mobile-width}) {
