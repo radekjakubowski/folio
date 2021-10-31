@@ -1,16 +1,16 @@
 <div class="step-info">
     <div class="company-logo"><img [src]="stepInfo.imgPath"></div>
-    <p class="name">{{stepInfo.name}}</p>
-    <p class="description">{{stepInfo.description}}</p>
+    <p class="name">{{stepInfo.name | translate}}</p>
+    <p class="description">{{stepInfo.description | translate}}</p>
     <p class="location">{{stepInfo.city}}</p>
     <div class="time-section">
         <span class="time" *ngIf="isInFullExperience">
-            {{stepInfo.monthFrom}} {{stepInfo.yearFrom}}  
+            {{stepInfo.monthFrom | translate}} {{stepInfo.yearFrom}}
         </span>
         <span class="time" *ngIf="isInFullExperience && !!stepInfo.monthTo">
-            - {{ stepInfo.monthTo }} {{ stepInfo.yearTo }}
+            - {{ stepInfo.monthTo | translate }} {{ stepInfo.yearTo }}
         </span>
-    </div>   
+    </div>
 </div>
 
 
