@@ -1,0 +1,88 @@
+@import "../../assets/utilities/variables";
+
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 20vh;
+  left: 5vw;
+  background-color: $cold;
+  z-index: 3;
+  height: 60vh;
+  width: 90vw;
+  font-family: 'Main';
+  color: $main;
+
+  @media (max-width: #{$mobile-width}) {
+    font-size: small;
+  }
+
+  .language-section {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    width: 100%;
+
+    .languages {
+      max-width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+
+      .language {
+        padding: 5%;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .active {
+        outline: 3px solid $secondary-main;
+      }
+    }
+  }
+
+  .theme-section {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    width: 100%;
+
+    .theme {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      border: 1px solid $secondary-main;
+    }
+  }
+
+  .modal-exit {
+    margin-top: 20px;
+
+    .exit-button {
+      border: 1px solid $secondary-main;
+      padding: 10px;
+      transition: 200ms;
+
+      &:hover {
+        transition: background-color 200ms ease-in-out, font-weight 0ms ease-in-out;
+        background-color: $warm;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}

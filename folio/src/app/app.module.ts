@@ -11,6 +11,7 @@ import { StatsComponent } from './stats/stats.component';
 import { ExperienceStepComponent } from './experience-step/experience-step.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { SettingsBarComponent } from './settings-bar/settings-bar.component';
+import { SettingsModalComponent } from './settings-modal/settings-modal.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SettingsBarComponent } from './settings-bar/settings-bar.component';
     StatsComponent,
     ExperienceStepComponent,
     ExperienceComponent,
-    SettingsBarComponent
+    SettingsBarComponent,
+    SettingsModalComponent
   ],
   imports: [
     BrowserModule,

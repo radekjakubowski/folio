@@ -1,0 +1,26 @@
+<div class="modal">
+  <div class="language-section">
+    <h1>Wybierz język</h1>
+    <div class="languages">
+      <span class='language'>
+        <img
+          src="../../assets/img/countries/pl.png"
+          (click)="setLanguage('pl')"
+          [ngClass]="{'active': currentLanguage === 'pl'}">
+      </span>
+      <span class='language'>
+        <img
+          src="../../assets/img/countries/uk.png"
+          (click)="setLanguage('en')"
+          [ngClass]="{'active': currentLanguage === 'en'}">
+      </span>
+    </div>
+  </div>
+  <div class="theme-section">
+    <h1>Wybierz motyw</h1>
+    <span class='theme'></span>
+  </div>
+  <div class='modal-exit'>
+    <div class="exit-button" (click)="closeModal()">Zamknij modal</div>
+  </div>
+</div>

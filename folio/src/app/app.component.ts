@@ -1,3 +1,4 @@
+import { UtilitiesService } from './utilities.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { interval } from 'rxjs';
 
@@ -9,12 +10,11 @@ import { interval } from 'rxjs';
 export class AppComponent implements OnInit {
   private colours: string[] = ['red', 'blue', 'orange'];
   public currentColour: string = '';
-  title = 'folio';
+  title = 'Radosław Jakubowski';
 
-  ngOnInit(): void {
+  constructor(public utilitiesService: UtilitiesService) {
   }
 
-  private randomIntFromInterval(min: number, max: number) : number {
-    return Math.floor(Math.random() * (max - min + 1) + min)
+  ngOnInit(): void {
   }
 }

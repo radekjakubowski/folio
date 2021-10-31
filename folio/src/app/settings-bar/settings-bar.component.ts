@@ -19,4 +19,8 @@ export class SettingsBarComponent implements OnInit {
   public navigateHome(): void {
     this.utilitiesService.navigateHome();
   }
+
+  public openSettingsModal(): void {
+    this.utilitiesService.isSettingsModalOpen = !this.utilitiesService.isSettingsModalOpen;
+  }
 }
