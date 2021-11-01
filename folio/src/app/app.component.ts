@@ -1,6 +1,7 @@
 import { UtilitiesService } from './utilities.service';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { interval } from 'rxjs';
 
 
 @Component({
@@ -12,6 +13,7 @@ export class AppComponent implements OnInit {
   private colours: string[] = ['red', 'blue', 'orange'];
   public currentColour: string = '';
   title = 'Radosław Jakubowski';
+  private duration: number = 0;
 
   constructor(public utilitiesService: UtilitiesService, private translateService: TranslateService) {
     this.translateService.setDefaultLang('pl');
@@ -20,6 +22,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.setTheme();
+
+    interval(1000).subscribe(() => {
+      this.duration++;
+      this.utilitiesService.durationObservable.next(this.duration);
+    });
   }
 
   private setTheme() {

@@ -54,6 +54,10 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: #{$mobile-width}) {
+      flex-direction: start;
+    }
+
     .languages-list {
       display: flex;
       flex-direction: row;
