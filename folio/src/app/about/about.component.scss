@@ -16,7 +16,7 @@
 
   .desc {
     grid-area: desc1;
-    color: $warm;
+    color: var(--default-warm);
     padding: 5vw;
     max-width: fit-content;
     line-height: 2em;
@@ -43,7 +43,7 @@
 
   .exp {
     padding: 2vw;
-    color: $cold;
+    color: var(--default-cold);
     grid-area: exp;
     display: flex;
     flex-direction: column;
@@ -65,14 +65,14 @@
     .full-experience-link {
       margin-left: 1vw;
       text-align: center;
-      color: $secondary-main;
+      color: var(--default-secondary-main);
       text-decoration: underline;
       margin-top: 1em;
       font-size: smaller;
 
       &:hover {
         cursor: pointer;
-        color: $cold;
+        color: var(--default-cold);
       }
 
       @media (max-width: #{$mobile-width}) {

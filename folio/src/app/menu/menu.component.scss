@@ -9,8 +9,8 @@
     justify-content: center;
     font-family: 'Main';
     font-size: large;
-    color: $warm;
-    text-shadow: 2px 2px $secondary-main;
+    color: var(--default-warm);
+    text-shadow: 2px 2px var(--default-secondary-main);
 
     @media (max-width: #{$mobile-width}) {
       font-size: smaller;
@@ -25,10 +25,10 @@
     justify-content: center;
 
     .profile-picture {
-      background-color: $secondary-main;
+      background-color: var(--default-secondary-main);
       margin-top: 2vh;
       border-radius: 50%;
-      box-shadow: 0px 0px 1em 1em $cold;
+      box-shadow: 0px 0px 1em 1em var(--default-cold);
       max-height: 90%;
       max-width: 90%;
       animation: float 6s ease-in-out infinite;
@@ -56,8 +56,8 @@
       text-align: center;
       font-family: 'Main';
       font-size: x-large;
-      color: $warm;
-      border: 1px solid $warm;
+      color: var(--default-warm);
+      border: 1px solid var(--default-warm);
       transition: 200ms;
 
       @media (max-width: #{$mobile-width}) {
@@ -67,7 +67,7 @@
 
       &:hover {
         transition: background-color 200ms ease-in-out, font-weight 0ms ease-in-out;
-        background-color: $secondary-main;
+        background-color: var(--default-secondary-main);
         font-weight: bold;
         cursor: pointer;
       }

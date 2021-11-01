@@ -16,9 +16,36 @@
       </span>
     </div>
   </div>
+  <h1>{{'Wybierz motyw' | translate }}</h1>
   <div class="theme-section">
-    <h1>{{'Wybierz motyw' | translate }}</h1>
-    <span class='theme'></span>
+    <span class='theme'>
+      <img
+        src="../../assets/img/themes/main.png"
+        [ngClass]="{'active': currentTheme === ''}"
+        (click)="setTheme('')"
+      >
+    </span>
+    <span class='theme'>
+      <img
+        src="../../assets/img/themes/alt1.png"
+        [ngClass]="{'active': currentTheme === 'alt1'}"
+        (click)="setTheme('alt1')"
+      >
+    </span>
+    <span class='theme'>
+      <img
+        src="../../assets/img/themes/alt2.png"
+        [ngClass]="{'active': currentTheme === 'alt2'}"
+        (click)="setTheme('alt2')"
+      >
+    </span>
+    <span class='theme'>
+      <img
+        src="../../assets/img/themes/alt3.png"
+        [ngClass]="{'active': currentTheme === 'alt3'}"
+        (click)="setTheme('alt3')"
+      >
+    </span>
   </div>
   <div class='modal-exit'>
     <div class="exit-button" (click)="closeModal()">{{'Zamknij' | translate }}</div>

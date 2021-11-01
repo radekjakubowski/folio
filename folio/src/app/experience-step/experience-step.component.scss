@@ -8,13 +8,13 @@
     justify-content: center;
     text-align: center;
     font-size: large;
-    color: $cold;
+    color: var(--default-warm);
     transition-duration: 200ms;
-    border: 5px double $secondary-main;
+    border: 5px double var(--default-secondary-main);
     padding: 5vw;
 
     &:hover {
-      border-color: $cold;
+      border-color: var(--default-cold);
       transform: scale(1.05);
       transition: all 200ms ease-in-out;
       cursor: pointer;

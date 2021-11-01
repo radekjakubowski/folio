@@ -19,5 +19,14 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.setTheme();
+  }
+
+  private setTheme() {
+    const theme = localStorage.getItem('folio-theme') || "";
+
+    if (theme) {
+      document.body.classList.add(theme);
+    }
   }
 }

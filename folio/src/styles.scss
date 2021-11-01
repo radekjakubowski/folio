@@ -5,8 +5,36 @@
   src: url(./assets/fonts/Courgette-Regular.ttf);
 }
 
+:root {
+  --default-main: #{$main};
+  --default-secondary-main: #{$secondary-main};
+  --default-cold: #{$cold};
+  --default-warm: #{$warm};
+}
+
+.alt1 {
+  --default-main: #{$main-alt1} !important;
+  --default-secondary-main: #{$secondary-main-alt1} !important;
+  --default-cold: #{$cold-alt1} !important;
+  --default-warm: #{$warm-alt1} !important;
+}
+
+.alt2 {
+  --default-main: #{$main-alt2} !important;
+  --default-secondary-main: #{$secondary-main-alt2} !important;
+  --default-cold: #{$cold-alt2} !important;
+  --default-warm: #{$warm-alt2} !important;
+}
+
+.alt3 {
+  --default-main: #{$main-alt3} !important;
+  --default-secondary-main: #{$secondary-main-alt3} !important;
+  --default-cold: #{$cold-alt3} !important;
+  --default-warm: #{$warm-alt3} !important;
+}
+
 body {
-  background-color: $cold;
+  background-color: var(--default-cold);
   padding-left: 10vw;
   padding-right: 10vw;
 
@@ -18,7 +46,7 @@ body {
 
 .main {
   display: grid;
-  background-color: $main;
+  background-color: var(--default-main);
   min-height: 98vh;
   max-height: fit-content;
   width: 100%;
