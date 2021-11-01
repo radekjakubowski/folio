@@ -1,0 +1,73 @@
+@import "../../assets/utilities/variables";
+
+.main {
+  font-family: 'Main';
+  grid-template-rows: 0.2fr 3fr 0.2fr;
+  grid-template-areas:
+  "settings settings settings settings"
+  "info info info info"
+  "rights rights rights rights";
+  color: var(--default-warm);
+
+  @media (max-width: #{$mobile-width}) {
+    font-size: smaller;
+  }
+
+  .settings {
+    grid-area: settings;
+  }
+
+  .info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: #{$mobile-width}) {
+      justify-content: center;
+    }
+
+    h1, h2, h3 {
+      width: 100%;
+      text-align: center;
+    }
+
+    a {
+      max-height: 120px;
+      img {
+        margin-top: 50px;
+        height: 100%;
+
+
+        &:hover {
+          outline: 1px solid var(--default-warm);
+          background-color: var(--default-cold);
+        }
+      }
+    }
+
+    .source-code {
+      margin-top: 100px;
+      text-decoration: underline;
+
+      a {
+        color: var(--default-warm);
+      }
+
+      &:hover {
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+    }
+  }
+
+  .rights {
+    grid-area: rights;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
