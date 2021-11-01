@@ -1,0 +1,110 @@
+@import "../../assets/utilities/variables";
+
+.main {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+  "settings settings settings settings"
+  "frameworks frameworks frameworks frameworks"
+  "languages languages languages languages"
+  "languages languages languages languages"
+  "languages languages languages languages";
+  font-family: 'Main';
+  color: var(--default-warm);
+
+  @media (max-width: #{$mobile-width}) {
+    font-size: small;
+  }
+
+  .settings {
+    grid-area: settings;
+  }
+
+  .frameworks {
+    grid-area: frameworks;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+
+    .frameworks-list {
+      display: flex;
+      flex-direction: row;
+
+      .framework {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        img {
+          max-width: 60%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .languages {
+    grid-area: languages;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .languages-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+
+      @media (max-width: #{$mobile-width}) {
+        flex-direction: column;
+      }
+
+      .language {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 60%;
+          height: auto;
+
+          @media (max-width: #{$mobile-width}) {
+            max-width: 25%;
+          }
+        }
+      }
+    }
+  }
+}
+
+ngx-skill-bar {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+img {
+  &:hover {
+    animation: jump 3s ease-in-out infinite;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translatey(0px);
+  }
+  25% {
+    transform: translatey(-5px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  75% {
+    transform: translatey(0px);
+  }
+}

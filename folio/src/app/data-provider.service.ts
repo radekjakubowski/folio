@@ -1,3 +1,4 @@
+import { Technology } from './models/technology';
 import { Injectable } from '@angular/core';
 import { ExperienceStep } from './models/experience-step';
 import { Stats } from './models/stats.interface';
@@ -8,6 +9,8 @@ import { Stats } from './models/stats.interface';
 export class DataProviderService {
   private stats: Stats[] = [];
   private experienceSteps: ExperienceStep[] = [];
+  private frameworks: Technology[] = [];
+  private languages: Technology[] = [];
 
   constructor() {
     this.stats = [
@@ -87,8 +90,51 @@ export class DataProviderService {
       imgPath: 'assets/img/companylogos/delphi.png'
     }
     ];
+
+    this.frameworks = [
+      {
+        name: 'Angular',
+        skill: 70,
+        imgPath: 'assets/img/technologies/Angular.png'
+      },
+      {
+        name: 'ASP.NET Core',
+        skill: 60,
+        imgPath: 'assets/img/technologies/NET_Core.png'
+      }
+    ];
+
+    this.languages = [
+      {
+        name: 'C#',
+        skill: 70,
+        imgPath: 'assets/img/technologies/Csharp.png'
+      },
+      {
+        name: 'TypeScript',
+        skill: 70,
+        imgPath: 'assets/img/technologies/Typescript.png'
+      },
+      {
+        name: 'JavaScript',
+        skill: 50,
+        imgPath: 'assets/img/technologies/JavaScript.png'
+      },
+      {
+        name: 'SQL',
+        skill: 40,
+        imgPath: 'assets/img/technologies/SQL.png'
+      },
+      {
+        name: 'HTML & CSS',
+        skill: 70,
+        imgPath: 'assets/img/technologies/HTML_CSS.png'
+      }
+    ]
+
+
   }
-  
+
   private getDayCount(date: Date): number {
     const oneDay = 1000 * 60 * 60 * 24;
     const timeNow = Date.now();
@@ -104,5 +150,13 @@ export class DataProviderService {
 
   public getExperienceSteps(): ExperienceStep[] {
     return this.experienceSteps;
+  }
+
+  public getFrameworks(): Technology[] {
+    return this.frameworks;
+  }
+
+  public getLanguages(): Technology[] {
+    return this.languages;
   }
 }

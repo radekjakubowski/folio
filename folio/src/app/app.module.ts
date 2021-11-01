@@ -15,6 +15,7 @@ import { ExperienceStepComponent } from './experience-step/experience-step.compo
 import { ExperienceComponent } from './experience/experience.component';
 import { SettingsBarComponent } from './settings-bar/settings-bar.component';
 import { SettingsModalComponent } from './settings-modal/settings-modal.component';
+import { NgxSkillBarModule } from 'ngx-skill-bar';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -42,8 +43,9 @@ export function createTranslateLoader(http: HttpClient) {
           provide: TranslateLoader,
           useFactory: createTranslateLoader,
           deps: [HttpClient]
-      }
-  }),
+        }
+    }),
+    NgxSkillBarModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

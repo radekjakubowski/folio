@@ -2,4 +2,22 @@
   <div class="settings">
     <app-settings-bar></app-settings-bar>
   </div>
+  <div class="frameworks">
+    <h1>{{'Frameworki' | translate }}</h1>
+    <div class="frameworks-list">
+      <div class="framework" *ngFor="let framework of frameworks">
+        <img [src]='framework.imgPath' [alt]='framework.name' [title]='framework.name'>
+        <ngx-skill-bar [barWidth]="15" [percentage]='framework.skill' [numberOfBars]="5"></ngx-skill-bar>
+      </div>
+    </div>
+  </div>
+  <div class="languages">
+    <h1>{{ 'Języki' | translate }}</h1>
+    <div class="languages-list">
+      <div class="language" *ngFor="let language of languages">
+        <img [src]='language.imgPath' [alt]='language.name' [title]='language.name'>
+        <ngx-skill-bar [barWidth]="15" [percentage]='language.skill' [numberOfBars]="5"></ngx-skill-bar>
+      </div>
+    </div>
+  </div>
 </div>
