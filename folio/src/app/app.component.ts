@@ -12,6 +12,7 @@ import { interval } from 'rxjs';
 export class AppComponent implements OnInit {
   private colours: string[] = ['red', 'blue', 'orange'];
   public currentColour: string = '';
+  public currentTheme: string;
   title = 'Radosław Jakubowski';
   private duration: number = 0;
 
@@ -27,6 +28,10 @@ export class AppComponent implements OnInit {
       this.duration++;
       this.utilitiesService.durationObservable.next(this.duration);
     });
+
+    this.utilitiesService.themeSubject.subscribe(theme => {
+      this.changeTheme(theme);
+    })
   }
 
   private setTheme() {
@@ -34,6 +39,16 @@ export class AppComponent implements OnInit {
 
     if (theme) {
       document.body.classList.add(theme);
+      this.currentTheme = theme;
+    }
+  }
+
+  private changeTheme(theme: string) {
+    document.body.classList.remove(this.currentTheme);
+
+    if (theme) {
+      document.body.classList.add(theme);
+      this.currentTheme = theme;
     }
   }
 }

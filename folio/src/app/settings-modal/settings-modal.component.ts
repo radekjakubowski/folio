@@ -1,5 +1,7 @@
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { UtilitiesService } from './../utilities.service';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 
 @Component({
@@ -11,7 +13,8 @@ export class SettingsModalComponent implements OnInit {
   public currentLanguage: string;
   public currentTheme: string;
 
-  constructor(private utilitiesService: UtilitiesService) { }
+  constructor(private utilitiesService: UtilitiesService, private translateService: TranslateService, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.currentLanguage = localStorage.getItem('folio-lang') || 'pl';
@@ -25,12 +28,21 @@ export class SettingsModalComponent implements OnInit {
   public setLanguage(lang: string): void {
     localStorage.setItem('folio-lang', lang);
     this.currentLanguage = lang;
-    window.location.reload();
+    this.reloadLanguage(lang);
   }
 
   public setTheme(theme: string): void {
     localStorage.setItem('folio-theme', theme);
     this.currentTheme = theme;
-    window.location.reload();
+    this.utilitiesService.themeSubject.next(theme);
+  }
+
+  private reloadLanguage(language: string) {
+    this.translateService.use(language);
+    this.translateService.setDefaultLang(language);
+    const prev = this.router.url;
+    this.router.navigate(['/']).then(data => {
+      this.router.navigate([prev]);
+    });
   }
 }

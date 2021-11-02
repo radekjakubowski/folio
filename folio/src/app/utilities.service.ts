@@ -8,6 +8,7 @@ import { interval, Subject } from 'rxjs';
 export class UtilitiesService {
   public isSettingsModalOpen = false;
   public durationObservable: Subject<number> = new Subject();
+  public themeSubject: Subject<string> = new Subject();
 
   constructor(private router: Router) { }
 
