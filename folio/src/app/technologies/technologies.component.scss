@@ -93,22 +93,20 @@ ngx-skill-bar {
 }
 
 img {
-  &:hover {
-    animation: jump 3s ease-in-out infinite;
-  }
+    animation: pulse 3s ease-in-out infinite;
 }
 
-@keyframes jump {
+@keyframes pulse {
   0% {
-    transform: translatey(0px);
+    transform: scale(1);
   }
   25% {
-    transform: translatey(-5px);
+    transform: scale(1.05);
   }
   50% {
-    transform: translatey(-10px);
+    transform: scale(0.95);
   }
   75% {
-    transform: translatey(0px);
+    transform: scale(1);
   }
 }
