@@ -88,6 +88,6 @@
   }
 
   .active {
-    outline: 3px solid var(--default-secondary-main);
+    box-shadow: 0 0 2px 2px var(--default-secondary-main);
   }
 }

@@ -44,6 +44,12 @@ body {
   }
 }
 
+.glow {
+  &:hover {
+    box-shadow: 0 5px 25px var(--default-secondary-main);
+  }
+}
+
 .main {
   display: grid;
   background-color: var(--default-main);

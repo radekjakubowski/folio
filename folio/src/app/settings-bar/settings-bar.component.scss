@@ -18,6 +18,12 @@
     img {
       max-height: 100%;
       margin-right: 20px;
+
+      &:hover {
+        background-color: var(--default-secondary-main);
+        background-blend-mode: overlay;
+        border-radius: 25%;
+      }
     }
   }
 }

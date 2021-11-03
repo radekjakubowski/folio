@@ -41,8 +41,8 @@
 
 
         &:hover {
-          outline: 1px solid var(--default-warm);
           background-color: var(--default-cold);
+          border-radius: 11%;
         }
       }
     }

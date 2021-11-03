@@ -3,13 +3,13 @@
     <h1>{{'Wybierz język' | translate}}</h1>
     <div class="languages">
       <span class='language'>
-        <img
+        <img class="glow"
           src="../../assets/img/countries/pl.png"
           (click)="setLanguage('pl')"
           [ngClass]="{'active': currentLanguage === 'pl'}">
       </span>
       <span class='language'>
-        <img
+        <img class="glow"
           src="../../assets/img/countries/uk.png"
           (click)="setLanguage('en')"
           [ngClass]="{'active': currentLanguage === 'en'}">
@@ -19,28 +19,28 @@
   <h1>{{'Wybierz motyw' | translate }}</h1>
   <div class="theme-section">
     <span class='theme'>
-      <img
+      <img class="glow"
         src="../../assets/img/themes/main.png"
         [ngClass]="{'active': currentTheme === ''}"
         (click)="setTheme('')"
       >
     </span>
     <span class='theme'>
-      <img
+      <img class="glow"
         src="../../assets/img/themes/alt1.png"
         [ngClass]="{'active': currentTheme === 'alt1'}"
         (click)="setTheme('alt1')"
       >
     </span>
     <span class='theme'>
-      <img
+      <img class="glow"
         src="../../assets/img/themes/alt2.png"
         [ngClass]="{'active': currentTheme === 'alt2'}"
         (click)="setTheme('alt2')"
       >
     </span>
     <span class='theme'>
-      <img
+      <img class="glow"
         src="../../assets/img/themes/alt3.png"
         [ngClass]="{'active': currentTheme === 'alt3'}"
         (click)="setTheme('alt3')"
@@ -48,6 +48,6 @@
     </span>
   </div>
   <div class='modal-exit'>
-    <div class="exit-button" (click)="closeModal()">{{'Zamknij' | translate }}</div>
+    <div class="exit-button glow" (click)="closeModal()">{{'Zamknij' | translate }}</div>
   </div>
 </div>
