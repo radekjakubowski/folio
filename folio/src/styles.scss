@@ -10,6 +10,7 @@
   --default-secondary-main: #{$secondary-main};
   --default-cold: #{$cold};
   --default-warm: #{$warm};
+  --default-highlight-bg: #{$content-bg};
 }
 
 .alt1 {
@@ -17,6 +18,7 @@
   --default-secondary-main: #{$secondary-main-alt1} !important;
   --default-cold: #{$cold-alt1} !important;
   --default-warm: #{$warm-alt1} !important;
+  --default-highlight-bg: #{$content-bg1} !important;
 }
 
 .alt2 {
@@ -24,6 +26,7 @@
   --default-secondary-main: #{$secondary-main-alt2} !important;
   --default-cold: #{$cold-alt2} !important;
   --default-warm: #{$warm-alt2} !important;
+  --default-highlight-bg: #{$content-bg2} !important;
 }
 
 .alt3 {
@@ -31,6 +34,7 @@
   --default-secondary-main: #{$secondary-main-alt3} !important;
   --default-cold: #{$cold-alt3} !important;
   --default-warm: #{$warm-alt3} !important;
+  --default-highlight-bg: #{$content-bg3} !important;
 }
 
 body {
@@ -51,12 +55,13 @@ body {
 }
 
 .main {
+  border-radius: 20px;
   display: grid;
   background-color: var(--default-main);
   min-height: 98vh;
   max-height: fit-content;
   width: 100%;
-  grid-template-rows: 0.1fr repeat(4, 1fr);
+  grid-template-rows: 0.1fr repeat(3, 1fr) 0.4fr;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
   "nav nav nav nav"
@@ -66,6 +71,7 @@ body {
   "menu menu menu menu";
 
   @media (max-width: #{$mobile-width}) {
+    min-height: 80vh;
     grid-template-areas:
     "nav nav nav nav"
     "photo photo photo photo"

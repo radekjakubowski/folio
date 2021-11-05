@@ -2,16 +2,19 @@
 
 .step-info {
     display: flex;
-    margin-left: 1vw;
+    background-color: var(--default-highlight-bg);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: large;
-    color: var(--default-warm);
+    font-size: larger;
+    color: var(--default-cold);
     transition-duration: 200ms;
-    border: 5px double var(--default-secondary-main);
-    padding: 5vw;
+    border: 2px;
+    border-style: ridge;
+    border-color: var(--default-secondary-main);
+   border-radius: 50px;
+    padding: 2vw;
 
     &:hover {
       border-color: var(--default-cold);

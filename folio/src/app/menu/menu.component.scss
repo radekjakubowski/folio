@@ -10,12 +10,15 @@
     font-family: 'Main';
     font-size: large;
     color: var(--default-warm);
-    text-shadow: 2px 2px var(--default-secondary-main);
+    text-shadow: 3px 3px var(--default-secondary-main);
 
     @media (max-width: #{$mobile-width}) {
       font-size: smaller;
     }
+  }
 
+  .settings {
+    grid-area: nav;
   }
 
   .photo {
@@ -47,9 +50,12 @@
     align-items: center;
     justify-content: center;
     margin-top: 5vh;
+    margin-bottom: 5vh;
 
     .button {
-      margin: 5% 5% 5% 5%;
+      background-color: var(--default-highlight-bg);
+      margin-left: 5%;
+      margin-right: 5%;
       height: 10vh;
       width: 15em;
       line-height: 10vh;
@@ -57,7 +63,10 @@
       font-family: 'Main';
       font-size: x-large;
       color: var(--default-warm);
-      border: 1px solid var(--default-warm);
+      border: 2px;
+      border-style: ridge;
+      border-color: var(--default-secondary-main);
+      border-radius: 10px;
       transition: 200ms;
 
       @media (max-width: #{$mobile-width}) {

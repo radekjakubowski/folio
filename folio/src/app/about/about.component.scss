@@ -7,6 +7,7 @@
   "stats stats desc1 desc1"
   "desc2 desc2 exp exp"
   "desc2 desc2 exp exp";
+  grid-template-rows: 0.1fr 0.5fr 0.5fr 0.5fr 0.5fr;
   font-family: 'Main';
   font-size: large;
 
@@ -15,11 +16,13 @@
   }
 
   .desc {
-    grid-area: desc1;
     color: var(--default-warm);
     padding: 5vw;
     max-width: fit-content;
     line-height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &::first-letter {
       font-size: xx-large;
@@ -30,15 +33,20 @@
     }
   }
 
+  .desc1 {
+    grid-area: desc1;
+  }
+
   .desc2 {
     grid-area: desc2;
   }
 
   .stats {
+    padding: 2vw;
     grid-area: stats;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 
   .exp {
