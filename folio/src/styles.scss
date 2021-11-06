@@ -69,9 +69,11 @@ body {
   "hello hello photo photo"
   "menu menu menu menu"
   "menu menu menu menu";
+  box-shadow:
+  5px 5px var(--default-highlight-bg),
+  6px 6px black;
 
   @media (max-width: #{$mobile-width}) {
-    min-height: 80vh;
     grid-template-areas:
     "nav nav nav nav"
     "photo photo photo photo"

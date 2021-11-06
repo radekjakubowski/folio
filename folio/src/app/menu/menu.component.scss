@@ -10,7 +10,14 @@
     font-family: 'Main';
     font-size: large;
     color: var(--default-warm);
-    text-shadow: 3px 3px var(--default-secondary-main);
+    text-shadow:
+    1px 1px var(--default-secondary-main),
+    2px 2px var(--default-secondary-main),
+    3px 3px var(--default-secondary-main),
+    4px 4px var(--default-highlight-bg),
+    5px 5px var(--default-highlight-bg),
+    6px 6px var(--default-highlight-bg),
+    7px 7px black;
 
     @media (max-width: #{$mobile-width}) {
       font-size: smaller;
@@ -31,7 +38,6 @@
       background-color: var(--default-secondary-main);
       margin-top: 2vh;
       border-radius: 50%;
-      box-shadow: 0px 0px 1em 1em var(--default-cold);
       max-height: 90%;
       max-width: 90%;
       animation: float 6s ease-in-out infinite;
@@ -64,10 +70,21 @@
       font-size: x-large;
       color: var(--default-warm);
       border: 2px;
-      border-style: ridge;
+      border-style: inset;
       border-color: var(--default-secondary-main);
       border-radius: 10px;
       transition: 200ms;
+      text-shadow:
+      1px 1px black,
+      2px 2px black;
+      box-shadow:
+      1px 1px var(--default-secondary-main),
+      2px 2px var(--default-secondary-main),
+      3px 3px var(--default-secondary-main),
+      4px 4px var(--default-highlight-bg),
+      5px 5px var(--default-highlight-bg),
+      6px 6px var(--default-highlight-bg),
+      7px 7px black;
 
       @media (max-width: #{$mobile-width}) {
         font-size: medium;
@@ -85,15 +102,15 @@
 
   @keyframes float {
     0% {
-      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      box-shadow: 0 5px 15px 0px var(--default-secondary-main);
       transform: translatey(0px);
     }
     50% {
-      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      box-shadow: 0 25px 15px 0px var(--default-cold);
       transform: translatey(-25px);
     }
     100% {
-      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      box-shadow: 0 5px 15px 0px var(--default-secondary-main);
       transform: translatey(0px);
     }
   }

@@ -3,11 +3,19 @@
 .wrap {
   background-color: var(--default-highlight-bg);
     border: 2px;
-    border-style: ridge;
+    border-style: inset;
     border-color: var(--default-secondary-main);
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 2vw;
     transition-duration: 200ms;
+    box-shadow:
+    1px 1px var(--default-secondary-main),
+    2px 2px var(--default-secondary-main),
+    3px 3px var(--default-secondary-main),
+    4px 4px var(--default-highlight-bg),
+    5px 5px var(--default-highlight-bg),
+    6px 6px var(--default-highlight-bg),
+    7px 7px black;
 
     &:hover {
         border-color: var(--default-cold);
@@ -32,6 +40,9 @@
             color: var(--default-cold);
             font-size: x-large;
             text-align: center;
+            text-shadow:
+            1px 1px black,
+            2px 2px black;
 
             @media (max-width: #{$mobile-width}) {
                 font-size: medium;
@@ -42,6 +53,9 @@
             font-size: x-large;
             color: var(--default-secondary-main);
             text-align: center;
+            text-shadow:
+            1px 1px black,
+            2px 2px black;
 
             @media (max-width: #{$mobile-width}) {
                 font-size: medium;

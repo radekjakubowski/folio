@@ -11,10 +11,20 @@
     color: var(--default-cold);
     transition-duration: 200ms;
     border: 2px;
-    border-style: ridge;
+    border-style: inset;
     border-color: var(--default-secondary-main);
-   border-radius: 50px;
+    border-radius: 10px;
     padding: 2vw;
+    box-shadow:
+    1px 1px var(--default-secondary-main),
+    2px 2px var(--default-secondary-main),
+    3px 3px var(--default-secondary-main),
+    4px 4px var(--default-highlight-bg),
+    5px 5px var(--default-highlight-bg),
+    6px 6px var(--default-highlight-bg),
+    7px 7px black;
+    text-shadow:
+    1px 1px black;
 
     &:hover {
       border-color: var(--default-cold);

@@ -23,9 +23,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-shadow:
+    1px 1px black;
 
-    &::first-letter {
-      font-size: xx-large;
+    p {
+      display: inline-block;
+
+      &::first-letter {
+        font-size: 48px;
+        line-height: 48px;
+
+        @media (max-width: #{$mobile-width}) {
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
     }
 
     @media (max-width: #{$mobile-width}) {
@@ -64,6 +76,10 @@
       margin-right: auto;
       text-align: center;
       font-size: x-large;
+      color: var(--default-warm);
+      text-shadow:
+      1px 1px var(--default-secondary-main),
+      2px 2px black;
 
       @media (max-width: #{$mobile-width}) {
         font-size: medium;
@@ -77,6 +93,8 @@
       text-decoration: underline;
       margin-top: 1em;
       font-size: smaller;
+      text-shadow:
+      1px 1px black;
 
       &:hover {
         cursor: pointer;
