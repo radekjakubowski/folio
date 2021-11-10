@@ -15,7 +15,8 @@
     4px 4px var(--default-highlight-bg),
     5px 5px var(--default-highlight-bg),
     6px 6px var(--default-highlight-bg),
-    7px 7px black;
+    7px 7px black,
+    inset 0 0 10px var(--default-secondary-main);
 
     &:hover {
         border-color: var(--default-cold);

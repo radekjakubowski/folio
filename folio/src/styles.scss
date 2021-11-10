@@ -71,7 +71,8 @@ body {
   "menu menu menu menu";
   box-shadow:
   5px 5px var(--default-highlight-bg),
-  6px 6px black;
+  6px 6px black,
+  inset 0 0 10px var(--default-secondary-main);
 
   @media (max-width: #{$mobile-width}) {
     grid-template-areas:
