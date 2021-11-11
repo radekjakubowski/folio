@@ -42,7 +42,7 @@ export class DataProviderService {
       monthTo: '',
       yearTo: NaN,
       description: 'Programista fullstack - .NET + Angular',
-      imgPath: 'assets/img/companylogos/gotoma.png'
+      imgPath: 'assets/img/companylogos/gotoma.webp'
     },
     {
       name: 'Programista aplikacji - staż',
@@ -53,7 +53,7 @@ export class DataProviderService {
       yearFrom: 2021,
       yearTo: 2021,
       description: 'Program stażowy .NET + Angular. Pierwsze kroki w projektach komercyjnych.',
-      imgPath: 'assets/img/companylogos/gotoma.png'
+      imgPath: 'assets/img/companylogos/gotoma.webp'
     },
     {
       name: 'Inżynier jakości',
@@ -65,7 +65,7 @@ export class DataProviderService {
       yearTo: 2020,
       description: 'Analizy MSA oraz SPC. Prowadzenie dokumentacji jakościowej na obszarze produkcyjnym.' +
         ' Udział w rozwiązywaniu postępowań reklamacyjnych dla klientów zagranicznych. Tworzenie standardów jakościowych oraz szkolenie pracowników obszaru produkcyjnego.',
-      imgPath: 'assets/img/companylogos/lsa.png'
+      imgPath: 'assets/img/companylogos/lsa.webp'
     },
     {
       name: 'Referent ds. zapewnienia jakości',
@@ -76,7 +76,7 @@ export class DataProviderService {
       yearFrom: 2018,
       yearTo: 2018,
       description: 'Wdrożenie na stanowisko inżynierskie',
-      imgPath: 'assets/img/companylogos/lsa.png'
+      imgPath: 'assets/img/companylogos/lsa.webp'
     },
     {
       name: 'Specjalista ds. klasyfikowania i indeksowania informacji',
@@ -87,7 +87,7 @@ export class DataProviderService {
       monthTo: 'lipiec',
       yearTo: 2017,
       description: 'Ocena i analiza nagrań z jazd testowych w celu budowy systemów active safety',
-      imgPath: 'assets/img/companylogos/delphi.png'
+      imgPath: 'assets/img/companylogos/delphi.webp'
     }
     ];
 
@@ -95,12 +95,12 @@ export class DataProviderService {
       {
         name: 'Angular',
         skill: 70,
-        imgPath: 'assets/img/technologies/Angular.png'
+        imgPath: 'assets/img/technologies/Angular.webp'
       },
       {
         name: 'ASP.NET Core',
         skill: 60,
-        imgPath: 'assets/img/technologies/NET_Core.png'
+        imgPath: 'assets/img/technologies/NET_Core.webp'
       }
     ];
 
@@ -108,27 +108,27 @@ export class DataProviderService {
       {
         name: 'C#',
         skill: 70,
-        imgPath: 'assets/img/technologies/Csharp.png'
+        imgPath: 'assets/img/technologies/Csharp.webp'
       },
       {
         name: 'TypeScript',
         skill: 70,
-        imgPath: 'assets/img/technologies/Typescript.png'
+        imgPath: 'assets/img/technologies/Typescript.webp'
       },
       {
         name: 'JavaScript',
         skill: 50,
-        imgPath: 'assets/img/technologies/JavaScript.png'
+        imgPath: 'assets/img/technologies/JavaScript.webp'
       },
       {
         name: 'SQL',
         skill: 40,
-        imgPath: 'assets/img/technologies/SQL.png'
+        imgPath: 'assets/img/technologies/SQL.webp'
       },
       {
         name: 'HTML & CSS',
         skill: 70,
-        imgPath: 'assets/img/technologies/HTML_CSS.png'
+        imgPath: 'assets/img/technologies/HTML_CSS.webp'
       }
     ]
 
