@@ -33,26 +33,25 @@ export class AppComponent implements OnInit {
       this.changeTheme(theme);
     });
 
-    this.setMemorizedTheme();
-    this.setChristmasTheme();
+    if (this.holidaysService.isChristmasTime()) {
+      this.setChristmasTheme();
+    } else {
+      this.setMemorizedTheme();
+    }
   }
 
   private setChristmasTheme() {
-    if (this.holidaysService.isChristmasTime()) {
       this.utilitiesService.setTheme('christmas');
-    }
-
-    if (!this.holidaysService.isChristmasTime()) {
-      this.utilitiesService.setTheme('');
-    }
   }
 
   private setMemorizedTheme() {
     const theme = localStorage.getItem('folio-theme') || "";
 
-    if (theme) {
+    if (theme !== 'christmas') {
       document.body.classList.add(theme);
       this.currentTheme = theme;
+    } else {
+      this.utilitiesService.setTheme('');
     }
   }
 
