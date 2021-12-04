@@ -1,8 +1,8 @@
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { UtilitiesService } from './../utilities.service';
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
+import { Component, OnInit } from '@angular/core';
+import { HolidaysService } from '../holidays.service';
 
 @Component({
   selector: 'app-settings-modal',
@@ -13,12 +13,14 @@ export class SettingsModalComponent implements OnInit {
   public currentLanguage: string;
   public currentTheme: string;
 
-  constructor(private utilitiesService: UtilitiesService, private translateService: TranslateService, private router: Router) {
+  constructor(private utilitiesService: UtilitiesService, private translateService: TranslateService, private router: Router, public holidaysService: HolidaysService) {
   }
 
   ngOnInit(): void {
     this.currentLanguage = localStorage.getItem('folio-lang') || 'pl';
     this.currentTheme = localStorage.getItem('folio-theme') || '';
+
+    this.utilitiesService.themeSubject.subscribe(theme => this.currentTheme = theme);
   }
 
   public closeModal(): void {
@@ -32,9 +34,7 @@ export class SettingsModalComponent implements OnInit {
   }
 
   public setTheme(theme: string): void {
-    localStorage.setItem('folio-theme', theme);
-    this.currentTheme = theme;
-    this.utilitiesService.themeSubject.next(theme);
+    this.utilitiesService.setTheme(theme);
   }
 
   private reloadLanguage(language: string) {

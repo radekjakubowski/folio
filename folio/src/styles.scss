@@ -37,7 +37,17 @@
   --default-highlight-bg: #{$content-bg3} !important;
 }
 
+.christmas {
+  background-image: url("../src/assets/img/themes/seasons/christmas-background.png");
+  --default-main: #{$main-christmas} !important;
+  --default-secondary-main: #{$secondary-main-christmas} !important;
+  --default-cold: #{$cold-christmas} !important;
+  --default-warm: #{$warm-christmas} !important;
+  --default-highlight-bg: #{$content-bg-christmas} !important;
+}
+
 body {
+  background-image: url('../src/assets/img/regular-background.png');
   background-color: var(--default-cold);
   padding-left: 10vw;
   padding-right: 10vw;

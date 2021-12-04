@@ -19,4 +19,9 @@ export class UtilitiesService {
   public openSettingsModal(): void {
     this.isSettingsModalOpen = !this.isSettingsModalOpen;
   }
+
+  public setTheme(theme: string): void {
+    localStorage.setItem('folio-theme', theme);
+    this.themeSubject.next(theme);
+  }
 }

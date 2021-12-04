@@ -16,8 +16,11 @@
       </span>
     </div>
   </div>
-  <h1>{{'Wybierz motyw' | translate }}</h1>
-  <div class="theme-section">
+  <div>
+
+  </div>
+  <h1 *ngIf="!holidaysService.isChristmasTime()">{{'Wybierz motyw' | translate }}</h1>
+  <div class="theme-section" *ngIf="!holidaysService.isChristmasTime()">
     <span class='theme'>
       <img class="glow"
         src="../../assets/img/themes/main.webp"

@@ -6,6 +6,7 @@
     <h1>{{ 'Cześć' | translate }}!</h1>
     <h2>{{ 'Mam na imię' | translate }} Radek.</h2>
     <h2>{{'Miło Cię poznać' | translate }}!</h2>
+    <h2 *ngIf="holidaysService.isChristmasTime()">{{'Wesołych świąt' | translate }}!</h2>
   </div>
   <div class="photo">
     <img src="../assets/img/pic.webp" alt="" class="profile-picture">
