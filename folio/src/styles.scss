@@ -38,7 +38,7 @@
 }
 
 .christmas {
-  background-image: url("../src/assets/img/themes/seasons/christmas-background.png");
+  background-image: url("../src/assets/img/themes/seasons/christmas-background.webp");
   --default-main: #{$main-christmas} !important;
   --default-secondary-main: #{$secondary-main-christmas} !important;
   --default-cold: #{$cold-christmas} !important;
@@ -47,7 +47,7 @@
 }
 
 body {
-  background-image: url('../src/assets/img/regular-background.png');
+  background-image: url('../src/assets/img/regular-background.webp');
   background-color: var(--default-cold);
   padding-left: 10vw;
   padding-right: 10vw;
