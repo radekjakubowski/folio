@@ -24,7 +24,7 @@
     6px 6px var(--default-highlight-bg),
     7px 7px black,
     inset 0 0 10px var(--default-secondary-main);
-    animation: pulse 3s ease-in-out infinite;
+    animation: pulse-exp 3s ease-in-out infinite;
     text-shadow:
     1px 1px black;
 
@@ -47,7 +47,7 @@
         margin-bottom: 2em;
     }
 
-    @keyframes pulse {
+    @keyframes pulse-exp {
       0% {
         transform: scale(1);
       }

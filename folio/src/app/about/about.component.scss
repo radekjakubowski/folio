@@ -59,7 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: pulse 3s ease-in-out infinite;
+    animation: pulse-about 3s ease-in-out infinite;
   }
 
   .exp {
@@ -109,7 +109,7 @@
     }
   }
 
-  @keyframes pulse {
+  @keyframes pulse-about {
     0% {
       transform: scale(1);
     }
