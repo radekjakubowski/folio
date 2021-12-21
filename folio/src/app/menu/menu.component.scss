@@ -21,6 +21,7 @@
 
     @media (max-width: #{$mobile-width}) {
       font-size: smaller;
+      margin-top: -15vh;
     }
   }
 
@@ -34,6 +35,10 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: #{$mobile-width}) {
+      height: fit-content;
+    }
+
     .profile-picture {
       background-color: var(--default-secondary-main);
       margin-top: 2vh;
@@ -43,8 +48,8 @@
       animation: float 6s ease-in-out infinite;
 
       @media (max-width: #{$mobile-width}) {
-        max-height: 70%;
-        max-width: 70%;
+        max-height: 250px;
+        max-width: 250px;
       }
     }
   }
