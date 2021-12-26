@@ -12,7 +12,6 @@ import { HolidaysService } from './holidays.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  private colours: string[] = ['red', 'blue', 'orange'];
   public currentColour: string = '';
   public currentTheme: string;
   title = 'Radosław Jakubowski';
