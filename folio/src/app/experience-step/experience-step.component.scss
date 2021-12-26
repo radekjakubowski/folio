@@ -1,5 +1,15 @@
 @import "../../assets/utilities/variables";
 
+.hoverable {
+  transition: all 200ms ease-in-out;
+  transition-duration: 200ms;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease-in-out;
+    cursor: pointer;
+  }
+}
 .step-info {
     display: flex;
     background-color: var(--default-highlight-bg);
@@ -9,7 +19,6 @@
     text-align: center;
     font-size: larger;
     color: var(--default-warm);
-    transition-duration: 200ms;
     border: 2px;
     border-style: inset;
     border-color: var(--default-secondary-main);
@@ -31,6 +40,10 @@
     @media (max-width: #{$mobile-width}) {
         font-size: small;
       }
+
+    &:hover {
+      border-color: var(--default-cold);
+    }
 
     .company-logo {
         display: flex;

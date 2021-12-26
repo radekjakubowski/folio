@@ -50,6 +50,7 @@ export class AppComponent implements OnInit {
       document.body.classList.add(theme);
       this.currentTheme = theme;
     } else {
+      localStorage.setItem('folio-theme', '');
       this.utilitiesService.setTheme('');
     }
   }

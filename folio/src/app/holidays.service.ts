@@ -7,6 +7,6 @@ export class HolidaysService {
   public isChristmasTime(): boolean {
     const todaysDate = new Date();
 
-    return (todaysDate.getMonth() === 11 && todaysDate.getDate() > 23) || (todaysDate.getMonth() === 11 && todaysDate.getDate() < 27)
+    return (todaysDate.getMonth() === 11 && todaysDate.getDate() > 23) && (todaysDate.getMonth() === 11 && todaysDate.getDate() < 27)
   }
 }

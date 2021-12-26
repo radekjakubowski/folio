@@ -21,7 +21,10 @@ export class UtilitiesService {
   }
 
   public setTheme(theme: string): void {
-    localStorage.setItem('folio-theme', theme);
+    if (theme !== 'christmas') {
+      localStorage.setItem('folio-theme', theme);
+    }
+
     this.themeSubject.next(theme);
   }
 }

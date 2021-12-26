@@ -1,16 +1,18 @@
-<div class="step-info">
-    <div class="company-logo"><img [src]="stepInfo.imgPath"></div>
-    <p class="name">{{stepInfo.name | translate}}</p>
-    <p class="description">{{stepInfo.description | translate}}</p>
-    <p class="location">{{stepInfo.city}}</p>
-    <div class="time-section">
-        <span class="time" *ngIf="isInFullExperience">
-            {{stepInfo.monthFrom | translate}} {{stepInfo.yearFrom}}
-        </span>
-        <span class="time" *ngIf="isInFullExperience && !!stepInfo.monthTo">
-            - {{ stepInfo.monthTo | translate }} {{ stepInfo.yearTo }}
-        </span>
-    </div>
+<div class="hoverable">
+  <div class="step-info">
+      <div class="company-logo"><img [src]="stepInfo.imgPath"></div>
+      <p class="name">{{stepInfo.name | translate}}</p>
+      <p class="description">{{stepInfo.description | translate}}</p>
+      <p class="location">{{stepInfo.city}}</p>
+      <div class="time-section">
+          <span class="time" *ngIf="isInFullExperience">
+              {{stepInfo.monthFrom | translate}} {{stepInfo.yearFrom}}
+          </span>
+          <span class="time" *ngIf="isInFullExperience && !!stepInfo.monthTo">
+              - {{ stepInfo.monthTo | translate }} {{ stepInfo.yearTo }}
+          </span>
+      </div>
+  </div>
 </div>
 
 
