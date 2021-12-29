@@ -1,0 +1,12 @@
+<div class="main">
+  <div class="settings">
+    <app-settings-bar></app-settings-bar>
+  </div>
+  <div class="hobbies">
+    <div class="hobby" *ngFor="let hobby of hobbies; let i = index">
+      <p class="title">{{ hobby.title | translate }}</p>
+      <iframe *ngIf="hobby.title === 'Gra na gitarze'" class='yt-video' src="https://www.youtube.com/embed/1YbtYet9JN4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p class="description">{{ hobby.description | translate }}</p>
+    </div>
+  </div>
+</div>

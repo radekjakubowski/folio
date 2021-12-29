@@ -1,0 +1,72 @@
+@import "../../../assets/utilities/variables";
+
+.main {
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1fr;
+  grid-template-areas:
+  "settings settings settings settings"
+  "hobbies hobbies hobbies hobbies";
+  font-family: 'Main';
+  color: var(--default-warm);
+  height: fit-content;
+
+  .settings {
+    grid-area: settings;
+  }
+
+  .hobbies {
+    grid-area: hobbies;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .hobby {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: x-large;
+        color: var(--default-warm);
+        text-shadow:
+        1px 1px var(--default-secondary-main),
+        2px 2px black;
+
+        @media (max-width: #{$mobile-width}) {
+          font-size: large;
+        }
+      }
+
+      .yt-video {
+        width: 60%;
+        height: 500px;
+
+        @media (max-width: #{$mobile-width}) {
+          height: 300px;
+          width: 90%;
+        }
+      }
+
+      .description {
+        font-size: large;
+        margin-left: 20%;
+        margin-right: 20%;
+        color: var(--default-warm);
+        width: 100%;
+        max-width: fit-content;
+        text-shadow:
+        1px 1px black;
+
+        @media (max-width: #{$mobile-width}) {
+          font-size: medium;
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ import { Technology } from './models/technology';
 import { Injectable } from '@angular/core';
 import { ExperienceStep } from './models/experience-step';
 import { Stats } from './models/stats.interface';
+import { Hobby } from './models/hobby';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ export class DataProviderService {
   private experienceSteps: ExperienceStep[] = [];
   private frameworks: Technology[] = [];
   private languages: Technology[] = [];
+  private hobbies: Hobby[] = [];
 
   constructor() {
     this.stats = [
@@ -132,6 +134,21 @@ export class DataProviderService {
       }
     ]
 
+    this.hobbies = [
+      {
+        title: 'Gra na gitarze',
+        description: 'Zacząłem naukę w wieku 16 lat.'
+      },
+      {
+        title: 'Bieganie',
+        description: 'Regularnie biegam przez wzgląd na miejsce, w którym mieszkam, dbając o kondycję.'
+      },
+      {
+        title: 'Motoryzacja',
+        description: 'Jako człowiek, który wcześniej pracował w motoryzacji, nadal uwielbiam śledzić informacje, dotyczące motoryzacji i jestem ogromnym miłośnikiem samochodów, zwłaszcza o napędzie spalinowym.'
+      }
+    ]
+
 
   }
 
@@ -159,4 +176,8 @@ export class DataProviderService {
   public getLanguages(): Technology[] {
     return this.languages;
   }
-}
+
+  public getHobbies(): Hobby[] {
+    return this.hobbies;
+  }
+ }

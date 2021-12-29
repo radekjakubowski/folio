@@ -6,8 +6,9 @@
   "stats stats desc1 desc1"
   "stats stats desc1 desc1"
   "desc2 desc2 exp exp"
-  "desc2 desc2 exp exp";
-  grid-template-rows: 0.1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  "desc2 desc2 exp exp"
+  "hobbies hobbies hobbies hobbies";
+  grid-template-rows: 0.1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.1fr;
   font-family: 'Main';
   font-size: large;
 
@@ -42,6 +43,79 @@
 
     @media (max-width: #{$mobile-width}) {
       font-size: small;
+    }
+  }
+
+  .hobbies {
+    grid-area: hobbies;
+    color: var(--default-warm);
+    padding: 5vw;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow:
+    1px 1px black;
+
+    p {
+      white-space: normal;
+
+      &::first-letter {
+        font-size: 48px;
+        line-height: 48px;
+
+        @media (max-width: #{$mobile-width}) {
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    @media (max-width: #{$mobile-width}) {
+      font-size: small;
+    }
+
+    .to_hobbies {
+      background-color: var(--default-highlight-bg);
+      margin-top: 15px;
+      margin-left: 5%;
+      margin-right: 5%;
+      height: 50px;
+      width: fit-content;
+      text-align: center;
+      font-family: 'Main';
+      font-size: larger;
+      color: var(--default-warm);
+      border: 2px;
+      border-style: inset;
+      border-color: var(--default-secondary-main);
+      border-radius: 10px;
+      transition: 200ms;
+      text-shadow:
+      1px 1px black;
+      box-shadow:
+      1px 1px var(--default-secondary-main),
+      2px 2px var(--default-secondary-main),
+      3px 3px var(--default-secondary-main),
+      4px 4px var(--default-highlight-bg),
+      5px 5px var(--default-highlight-bg),
+      6px 6px var(--default-highlight-bg),
+      7px 7px black,
+      inset 0 0 10px var(--default-secondary-main);
+      animation: pulse-about 3s ease-in-out infinite;
+
+      @media (max-width: #{$mobile-width}) {
+        font-size: small;
+        min-width: fit-content;
+      }
+
+      &:hover {
+        transition: background-color 200ms ease-in-out, font-weight 0ms ease-in-out;
+        background-color: var(--default-secondary-main);
+        font-weight: bold;
+        cursor: pointer;
+      }
     }
   }
 

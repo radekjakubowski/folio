@@ -16,6 +16,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { SettingsBarComponent } from './settings-bar/settings-bar.component';
 import { SettingsModalComponent } from './settings-modal/settings-modal.component';
 import { NgxSkillBarModule } from 'ngx-skill-bar';
+import { HobbiesComponent } from './about/hobbies/hobbies.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -32,7 +33,8 @@ export function createTranslateLoader(http: HttpClient) {
     ExperienceStepComponent,
     ExperienceComponent,
     SettingsBarComponent,
-    SettingsModalComponent
+    SettingsModalComponent,
+    HobbiesComponent
   ],
   imports: [
     BrowserModule,
