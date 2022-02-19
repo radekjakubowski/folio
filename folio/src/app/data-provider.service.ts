@@ -96,12 +96,12 @@ export class DataProviderService {
     this.frameworks = [
       {
         name: 'Angular',
-        skill: 70,
+        skill: 80,
         imgPath: 'assets/img/technologies/Angular.webp'
       },
       {
         name: 'ASP.NET Core',
-        skill: 60,
+        skill: 70,
         imgPath: 'assets/img/technologies/NET_Core.webp'
       }
     ];
@@ -119,12 +119,12 @@ export class DataProviderService {
       },
       {
         name: 'JavaScript',
-        skill: 50,
+        skill: 60,
         imgPath: 'assets/img/technologies/JavaScript.webp'
       },
       {
         name: 'SQL',
-        skill: 40,
+        skill: 50,
         imgPath: 'assets/img/technologies/SQL.webp'
       },
       {
