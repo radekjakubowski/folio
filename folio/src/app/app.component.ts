@@ -44,11 +44,13 @@ export class AppComponent implements OnInit {
   }
 
   private setMemorizedTheme() {
-    const theme = localStorage.getItem('folio-theme') || "";
+    const theme = localStorage.getItem('folio-theme') || '';
 
     if (theme !== 'christmas') {
-      document.body.classList.add(theme);
-      this.currentTheme = theme;
+      if (theme) {
+        document.body.classList.add(theme);
+        this.currentTheme = theme;
+      }
     } else {
       localStorage.setItem('folio-theme', '');
       this.utilitiesService.setTheme('');
