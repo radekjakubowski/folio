@@ -22,32 +22,57 @@
   <h1 *ngIf="!holidaysService.isChristmasTime()">{{'Wybierz motyw' | translate }}</h1>
   <div class="theme-section" *ngIf="!holidaysService.isChristmasTime()">
     <span class='theme'>
-      <img class="glow"
-        src="../../assets/img/themes/main.webp"
+      <app-theme-display
+        class="glow"
         [ngClass]="{'active': currentTheme === ''}"
         (click)="setTheme('')"
-      >
+        [main]="'#506D84'"
+        [secondary]="'#889EAF'"
+        [cold]="'#D4B499'"
+        [warm]="'#F3D5C0'"
+      ></app-theme-display>
     </span>
     <span class='theme'>
-      <img class="glow"
-        src="../../assets/img/themes/alt1.webp"
+      <app-theme-display
+        class="glow"
         [ngClass]="{'active': currentTheme === 'alt1'}"
         (click)="setTheme('alt1')"
-      >
+        [main]="'#483434'"
+        [secondary]="'#6B4F4F'"
+        [cold]="'#EED6C4'"
+        [warm]="'#FFF3E4'"
+      ></app-theme-display>
     </span>
     <span class='theme'>
-      <img class="glow"
-        src="../../assets/img/themes/alt2.webp"
+      <app-theme-display
+        class="glow"
         [ngClass]="{'active': currentTheme === 'alt2'}"
         (click)="setTheme('alt2')"
-      >
+        [main]="'#F0A500'"
+        [secondary]="'#ffffff'"
+        [cold]="'#082032'"
+        [warm]="'#6e3a09'"
+      ></app-theme-display>
     </span>
     <span class='theme'>
-      <img class="glow"
-        src="../../assets/img/themes/alt3.webp"
+      <app-theme-display
+        class="glow"
         [ngClass]="{'active': currentTheme === 'alt3'}"
         (click)="setTheme('alt3')"
-      >
+        [main]="'#EB92BE'"
+        [secondary]="'#FFEF78'"
+        [cold]="'#e9cfa8'"
+        [warm]="'#70118d'"
+      ></app-theme-display>
+    </span>
+    <span class='theme'>
+      <app-theme-display
+        [ngClass]="{'active': currentTheme === 'custom'}"
+        (click)="setTheme('custom')"
+      ></app-theme-display>
+      <div class="creator glow">
+        <p>Create your own theme</p>
+      </div>
     </span>
   </div>
   <div class='modal-exit'>

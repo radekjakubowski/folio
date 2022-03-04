@@ -1,0 +1,21 @@
+@import "../../../assets/utilities/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 75px;
+
+  @media (max-width: #{$mobile-width}) {
+    width: 50px;
+  }
+
+  & > * {
+    height: 25%;
+    width: 100%;
+  }
+}
+
+.bordered {
+  border: 1px dashed var(--default-main);
+}

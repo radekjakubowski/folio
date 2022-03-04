@@ -63,14 +63,27 @@
     }
 
     .theme {
+      position: relative;
       display: flex;
       flex-direction: row;
       margin-left: 2%;
       margin-right: 2%;
 
-      img {
-        max-width: 100%;
-        height: auto;
+      .creator {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        cursor: pointer;
+        height: 200px;
+        width: 75px;
+
+        @media (max-width: #{$mobile-width}) {
+          width: 50px;
+        }
+
+        p {
+          text-align: center;
+        }
       }
     }
   }
