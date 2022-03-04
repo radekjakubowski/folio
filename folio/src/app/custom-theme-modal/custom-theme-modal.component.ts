@@ -13,7 +13,7 @@ export class CustomThemeModalComponent {
   cold: string  = '#FFFFFF';
   warm: string  = '#FFFFFF';
 
-  constructor(private utilitiesService: UtilitiesService, private changeDetector: ChangeDetectorRef) {}
+  constructor(private utilitiesService: UtilitiesService) {}
 
   setColor(color: string, value: string) {
     switch (color) {
@@ -45,7 +45,16 @@ export class CustomThemeModalComponent {
     document.documentElement.style.setProperty('--default-warm', bgColorRgb.toString());
     document.documentElement.style.setProperty('--default-highlight-bg', bgColorRgb);
 
-    this.changeDetector.markForCheck();
+    const themeObj = {
+      main: this.main,
+      secondaryMain: this.secondaryMain,
+      cold: this.cold,
+      warm: this.warm,
+      highlight: bgColorRgb
+    }
+
+    this.utilitiesService.setTheme('custom');
+    localStorage.setItem('folio-custom-theme', JSON.stringify(themeObj));
   }
 
   exitModal() {
