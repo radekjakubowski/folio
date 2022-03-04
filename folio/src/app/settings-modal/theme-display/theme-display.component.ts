@@ -18,6 +18,12 @@ export class ThemeDisplayComponent implements OnChanges {
   @Input()
   cold: string = '#FFFFFF';
 
+  @Input()
+  width: string;
+
+  @Input()
+  height: string;
+
   public noInputParams = true;
 
   ngOnChanges() {

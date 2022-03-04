@@ -4,6 +4,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
+import { CustomThemeModalComponent } from './custom-theme-modal/custom-theme-modal.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -36,7 +37,8 @@ export function createTranslateLoader(http: HttpClient) {
     SettingsBarComponent,
     SettingsModalComponent,
     HobbiesComponent,
-    ThemeDisplayComponent
+    ThemeDisplayComponent,
+    CustomThemeModalComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,7 @@ export function createTranslateLoader(http: HttpClient) {
           deps: [HttpClient]
         }
     }),
-    NgxSkillBarModule
+    NgxSkillBarModule,
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

@@ -68,9 +68,8 @@
     <span class='theme'>
       <app-theme-display
         [ngClass]="{'active': currentTheme === 'custom'}"
-        (click)="setTheme('custom')"
       ></app-theme-display>
-      <div class="creator glow">
+      <div class="creator glow" (click)="openCustomThemeModal()">
         <p>Create your own theme</p>
       </div>
     </span>

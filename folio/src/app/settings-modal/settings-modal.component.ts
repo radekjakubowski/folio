@@ -13,8 +13,7 @@ export class SettingsModalComponent implements OnInit {
   public currentLanguage: string;
   public currentTheme: string;
 
-  constructor(private utilitiesService: UtilitiesService, private translateService: TranslateService, private router: Router, public holidaysService: HolidaysService) {
-  }
+  constructor(private utilitiesService: UtilitiesService, private translateService: TranslateService, private router: Router, public holidaysService: HolidaysService) {}
 
   ngOnInit(): void {
     this.currentLanguage = localStorage.getItem('folio-lang') || 'pl';
@@ -44,5 +43,10 @@ export class SettingsModalComponent implements OnInit {
     this.router.navigate(['/']).then(data => {
       this.router.navigate([prev]);
     });
+  }
+
+  public openCustomThemeModal() {
+    this.closeModal();
+    this.utilitiesService.isCustomThemeModalOpen = true;
   }
 }

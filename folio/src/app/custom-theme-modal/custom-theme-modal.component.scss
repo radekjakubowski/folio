@@ -1,0 +1,88 @@
+@import "../../assets/utilities/_variables.scss";
+
+.modal {
+  position: absolute;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  top: 20vh;
+  left: 5vw;
+  background-color: var(--default-cold);
+  z-index: 3;
+  height: fit-content;
+  width: 90vw;
+  font-family: 'Main';
+  color: var(--default-main);
+  border: 5px solid var(--default-highlight-bg);
+  border-radius: 10px;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 0.1fr;
+  grid-template-areas:
+  "title title"
+  "picker preview"
+  "menu menu";
+
+  @media (max-width: #{$mobile-width}) {
+    font-size: small;
+  }
+
+  .button {
+    border: 1px solid var(--default-secondary-main);
+    padding: 10px;
+    transition: 200ms;
+    margin-bottom: 10px;
+    margin: 5vw;
+
+    &:hover {
+      transition: background-color 200ms ease-in-out, font-weight 0ms ease-in-out;
+      background-color: var(--default-warm);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  .picker {
+    grid-area: picker;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      width: 20vw;
+      margin-right: 2vw;
+    }
+  }
+
+  .preview {
+    grid-area: preview;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .title {
+    grid-area: title;
+    margin-bottom: 5vh;
+  }
+
+  .color-picker {
+    display: flex;
+    min-height: 10vh;
+    margin-bottom: 2vh;
+    align-items: center;
+
+    input {
+      width: 15vw;
+    }
+  }
+}
