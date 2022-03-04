@@ -26,7 +26,11 @@ export class ThemeDisplayComponent implements OnChanges {
 
   public noInputParams = true;
 
-  ngOnChanges() {
+  ngOnChanges(changes) {
     this.noInputParams = false;
+
+    if (changes?.main?.currentValue === null) {
+      this.noInputParams = true;
+    }
   }
 }

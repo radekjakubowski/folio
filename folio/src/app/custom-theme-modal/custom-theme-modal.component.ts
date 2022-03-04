@@ -1,19 +1,33 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { CustomThemeApplierService } from './../custom-theme-applier.service';
+import { CustomThemeInterface } from './../models/custom-theme';
 import { UtilitiesService } from './../utilities.service';
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-custom-theme-modal',
   templateUrl: './custom-theme-modal.component.html',
   styleUrls: ['./custom-theme-modal.component.scss']
 })
-export class CustomThemeModalComponent {
-  main: string = '#FFFFFF';
-  secondaryMain: string  = '#FFFFFF';
-  cold: string  = '#FFFFFF';
-  warm: string  = '#FFFFFF';
+export class CustomThemeModalComponent implements OnInit {
+  main: string;
+  secondaryMain: string;
+  cold: string;
+  warm: string;
 
-  constructor(private utilitiesService: UtilitiesService) {}
+  default = '#FFFFFF';
+
+  constructor(private utilitiesService: UtilitiesService, private customThemeApplier: CustomThemeApplierService) {}
+
+  ngOnInit(): void {
+    const customTheme = this.utilitiesService.customTheme;
+
+    if (customTheme) {
+      this.main = customTheme.main;
+      this.secondaryMain = customTheme.secondaryMain;
+      this.cold = customTheme.cold;
+      this.warm = customTheme.warm;
+    }
+  }
 
   setColor(color: string, value: string) {
     switch (color) {
@@ -37,55 +51,18 @@ export class CustomThemeModalComponent {
   }
 
   applyTheme() {
-    const bgColorRgb = this.lightenDarkenColor(this.main, -60);
-    this.utilitiesService.setTheme('');
-    document.documentElement.style.setProperty('--default-main', this.main);
-    document.documentElement.style.setProperty('--default-secondary-main', this.secondaryMain);
-    document.documentElement.style.setProperty('--default-cold', this.cold);
-    document.documentElement.style.setProperty('--default-warm', bgColorRgb.toString());
-    document.documentElement.style.setProperty('--default-highlight-bg', bgColorRgb);
-
-    const themeObj = {
+    const themeObj: CustomThemeInterface = {
       main: this.main,
       secondaryMain: this.secondaryMain,
       cold: this.cold,
       warm: this.warm,
-      highlight: bgColorRgb
     }
 
-    this.utilitiesService.setTheme('custom');
-    localStorage.setItem('folio-custom-theme', JSON.stringify(themeObj));
+    this.customThemeApplier.applyTheme(themeObj);
   }
 
   exitModal() {
     this.utilitiesService.isCustomThemeModalOpen = false;
     this.utilitiesService.isSettingsModalOpen = true;
   }
-
-  private lightenDarkenColor(col: string, amt: number) {
-    var usePound = false;
-    if ( col[0] == "#" ) {
-        col = col.slice(1);
-        usePound = true;
-    }
-
-    var num = parseInt(col,16);
-
-    var r = (num >> 16) + amt;
-
-    if ( r > 255 ) r = 255;
-    else if  (r < 0) r = 0;
-
-    var b = ((num >> 8) & 0x00FF) + amt;
-
-    if ( b > 255 ) b = 255;
-    else if  (b < 0) b = 0;
-
-    var g = (num & 0x0000FF) + amt;
-
-    if ( g > 255 ) g = 255;
-    else if  ( g < 0 ) g = 0;
-
-    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
-}
 }

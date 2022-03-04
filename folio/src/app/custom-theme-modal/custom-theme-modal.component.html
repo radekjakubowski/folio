@@ -1,33 +1,35 @@
 <div class="modal">
   <div class="title">
-    <h1>Choose colors and click apply to create your custom theme!</h1>
+    <h1>{{ 'Wybierz kolory i naciśnij zastosuj, aby stworzyć swój motyw!' | translate }}</h1>
   </div>
   <div class="picker">
     <div class="color-picker">
-      <span>Main color</span><input #mainInput type="color" [value]="'#ffffff'" (change)="setColor('main', mainInput.value)">
+      <span>{{ 'Kolor główny' | translate }}</span><input #mainInput type="color" [value]="main ? main : default" (change)="setColor('main', mainInput.value)">
     </div>
     <div class="color-picker">
-      <span>Secondary main color</span><input #secondaryInput type="color" [value]="'#ffffff'" (change)="setColor('secondaryMain', secondaryInput.value)">
+      <span>{{ 'Kolor uzupełniający' | translate }}</span><input #secondaryInput type="color" [value]="secondaryMain ? secondaryMain : default" (change)="setColor('secondaryMain', secondaryInput.value)">
     </div>
     <div class="color-picker">
-      <span>Cold color</span><input #coldInput type="color" [value]="'#ffffff'" (change)="setColor('cold', coldInput.value)">
+      <span>{{ 'Kolor chłodny' | translate }}</span><input #coldInput type="color" [value]="cold ? cold : default" (change)="setColor('cold', coldInput.value)">
     </div>
     <div class="color-picker">
-      <span>Warm color</span><input #warmInput type="color" [value]="'#ffffff'" (change)="setColor('warm', warmInput.value)">
+      <span>{{ 'Kolor ciepły' | translate }}</span><input #warmInput type="color" [value]="warm ? warm : default" (change)="setColor('warm', warmInput.value)">
     </div>
   </div>
   <div class="preview">
+    <h2>{{ 'Podgląd' | translate }}</h2>
     <app-theme-display
-    [main]="main"
-    [secondary]="secondaryMain"
-    [cold]="cold"
-    [warm]="warm"
-    [width]="'150px'"
-    [height]="'400px'"
+      class="color-preview"
+      [main]="main"
+      [secondary]="secondaryMain"
+      [cold]="cold"
+      [warm]="warm"
+      [width]="'150px'"
+      [height]="'400px'"
     ></app-theme-display>
   </div>
   <div class="menu">
-    <div class="button" (click)="applyTheme()">Apply</div>
-    <div class="button" (click)="exitModal()">Exit</div>
+    <div class="button" (click)="applyTheme()">{{ 'Zastosuj' | translate }}</div>
+    <div class="button" (click)="exitModal()">{{ 'Zamknij' | translate }}</div>
   </div>
 </div>

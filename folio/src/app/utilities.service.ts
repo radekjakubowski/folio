@@ -1,6 +1,7 @@
-import { Injectable, OnInit } from '@angular/core';
+import { CustomThemeInterface } from './models/custom-theme';
+import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { interval, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ export class UtilitiesService {
   public isCustomThemeModalOpen = false;
   public durationObservable: Subject<number> = new Subject();
   public themeSubject: Subject<string> = new Subject();
+  public customTheme: CustomThemeInterface;
 
   constructor(private router: Router) { }
 

@@ -61,6 +61,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .color-preview {
+      border: 1px solid black;
+      border-radius: 5px;
+    }
   }
 
   .menu {

@@ -1,7 +1,8 @@
+import { CustomThemeInterface } from './../models/custom-theme';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { UtilitiesService } from './../utilities.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { HolidaysService } from '../holidays.service';
 
 @Component({
@@ -12,6 +13,7 @@ import { HolidaysService } from '../holidays.service';
 export class SettingsModalComponent implements OnInit {
   public currentLanguage: string;
   public currentTheme: string;
+  public customTheme: CustomThemeInterface;
 
   constructor(private utilitiesService: UtilitiesService, private translateService: TranslateService, private router: Router, public holidaysService: HolidaysService) {}
 
@@ -19,7 +21,11 @@ export class SettingsModalComponent implements OnInit {
     this.currentLanguage = localStorage.getItem('folio-lang') || 'pl';
     this.currentTheme = localStorage.getItem('folio-theme') || '';
 
-    this.utilitiesService.themeSubject.subscribe(theme => this.currentTheme = theme);
+    this.customTheme = this.utilitiesService.customTheme;
+    this.utilitiesService.themeSubject.subscribe(theme => {
+      this.currentTheme = theme;
+      this.customTheme = null;
+    });
   }
 
   public closeModal(): void {
