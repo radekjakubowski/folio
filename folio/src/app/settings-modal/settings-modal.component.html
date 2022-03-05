@@ -74,7 +74,8 @@
         [warm]="customTheme?.warm"
       ></app-theme-display>
       <div class="creator glow" (click)="openCustomThemeModal()">
-        <p>{{ 'Stwórz własny motyw' | translate }}</p>
+        <p *ngIf="!customTheme">{{ 'Stwórz własny motyw' | translate }}</p>
+        <p *ngIf="customTheme">{{ 'Twój własny motyw' | translate }}</p>
       </div>
     </span>
   </div>

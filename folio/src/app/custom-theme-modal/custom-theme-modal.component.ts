@@ -1,7 +1,7 @@
-import { CustomThemeApplierService } from './../custom-theme-applier.service';
-import { CustomThemeInterface } from './../models/custom-theme';
-import { UtilitiesService } from './../utilities.service';
-import { Component, OnInit } from '@angular/core';
+import { CustomThemeApplierService } from './../custom-theme-applier.service'
+import { CustomThemeInterface } from './../models/custom-theme'
+import { UtilitiesService } from './../utilities.service'
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-custom-theme-modal',
@@ -9,43 +9,48 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-theme-modal.component.scss']
 })
 export class CustomThemeModalComponent implements OnInit {
-  main: string;
-  secondaryMain: string;
-  cold: string;
-  warm: string;
+  main: string
+  secondaryMain: string
+  cold: string
+  warm: string
 
-  default = '#FFFFFF';
+  private mobileWidth = 768
+  private currentViewportWidth: number;
+
+  default = '#FFFFFF'
 
   constructor(private utilitiesService: UtilitiesService, private customThemeApplier: CustomThemeApplierService) {}
 
   ngOnInit(): void {
-    const customTheme = this.utilitiesService.customTheme;
+    const customTheme = this.utilitiesService.customTheme
 
     if (customTheme) {
-      this.main = customTheme.main;
-      this.secondaryMain = customTheme.secondaryMain;
-      this.cold = customTheme.cold;
-      this.warm = customTheme.warm;
+      this.main = customTheme.main
+      this.secondaryMain = customTheme.secondaryMain
+      this.cold = customTheme.cold
+      this.warm = customTheme.warm
     }
+
+    this.currentViewportWidth = window.innerWidth
   }
 
   setColor(color: string, value: string) {
     switch (color) {
       case 'main': {
-        this.main = value;
-        break;
+        this.main = value
+        break
       }
       case 'secondaryMain': {
-        this.secondaryMain = value;
-        break;
+        this.secondaryMain = value
+        break
       }
       case 'cold': {
-        this.cold = value;
-        break;
+        this.cold = value
+        break
       }
       case 'warm': {
-        this.warm = value;
-        break;
+        this.warm = value
+        break
       }
     }
   }
@@ -58,11 +63,11 @@ export class CustomThemeModalComponent implements OnInit {
       warm: this.warm,
     }
 
-    this.customThemeApplier.applyTheme(themeObj);
+    this.customThemeApplier.applyTheme(themeObj)
   }
 
   exitModal() {
-    this.utilitiesService.isCustomThemeModalOpen = false;
-    this.utilitiesService.isSettingsModalOpen = true;
+    this.utilitiesService.isCustomThemeModalOpen = false
+    this.utilitiesService.isSettingsModalOpen = true
   }
 }
