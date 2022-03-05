@@ -64,10 +64,13 @@
     align-items: center;
 
     .color-preview {
-      border: 1px solid black;
-      border-radius: 5px;
+      outline: 1px solid black;
       height: 200px;
       width: 75px;
+
+      @media (max-width: #{$mobile-width}) {
+        width: 50px;
+      }
     }
 
     h2 {
