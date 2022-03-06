@@ -30,4 +30,15 @@ export class UtilitiesService {
 
     this.themeSubject.next(theme);
   }
+
+  public downloadFile(path: string) {
+    let link = document.createElement('a');
+    link.setAttribute('type', 'hidden');
+    link.href = path;
+    let filename = path.replace(/^.*[\\\/]/, '')
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
 }

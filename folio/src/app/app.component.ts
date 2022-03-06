@@ -25,8 +25,9 @@ export class AppComponent implements OnInit {
     private holidaysService: HolidaysService,
     private customThemeApplierService: CustomThemeApplierService
   ) {
+    const currentLanguage = localStorage.getItem('folio-lang') || 'pl';
     this.translateService.setDefaultLang('pl');
-    this.translateService.use(localStorage.getItem('folio-lang') || 'pl');
+    this.translateService.use(currentLanguage);
   }
 
   ngOnInit(): void {

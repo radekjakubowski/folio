@@ -42,7 +42,6 @@
     a {
       max-height: 120px;
       img {
-        margin-top: 50px;
         height: 100%;
 
 
@@ -53,19 +52,57 @@
       }
     }
 
-    .source-code {
-      margin-top: 100px;
-      text-decoration: underline;
+    .cv-download {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
 
-      a {
-        color: var(--default-warm);
+    .button {
+      background-color: var(--default-highlight-bg);
+      margin-left: 5%;
+      margin-right: 5%;
+      height: 3vh;
+      width: 40%;
+      text-align: center;
+      font-family: 'Main';
+      color: var(--default-warm);
+      border: 2px;
+      border-style: inset;
+      border-color: var(--default-secondary-main);
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow:
+      1px 1px var(--default-secondary-main),
+      2px 2px var(--default-secondary-main),
+      3px 3px var(--default-secondary-main),
+      4px 4px var(--default-highlight-bg),
+      5px 5px var(--default-highlight-bg),
+      6px 6px var(--default-highlight-bg),
+      7px 7px black,
+      inset 0 0 10px var(--default-secondary-main);
+
+      @media (max-width: #{$mobile-width}) {
+        width: 70%;
+        font-size: small;
+        min-width: fit-content;
       }
 
       &:hover {
+        transition: background-color 200ms ease-in-out, font-weight 0ms ease-in-out;
+        background-color: var(--default-secondary-main);
         font-weight: bold;
         cursor: pointer;
       }
+    }
 
+    .source-code {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 50px;
     }
   }
 
