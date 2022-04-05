@@ -103,6 +103,11 @@ export class DataProviderService {
         name: 'ASP.NET Core',
         skill: 70,
         imgPath: 'assets/img/technologies/NET_Core.webp'
+      },
+      {
+        name: 'React',
+        skill: 40,
+        imgPath: 'assets/img/technologies/React.webp'
       }
     ];
 
