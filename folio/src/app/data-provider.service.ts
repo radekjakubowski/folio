@@ -124,7 +124,7 @@ export class DataProviderService {
       },
       {
         name: 'JavaScript',
-        skill: 60,
+        skill: 70,
         imgPath: 'assets/img/technologies/JavaScript.webp'
       },
       {
@@ -134,7 +134,7 @@ export class DataProviderService {
       },
       {
         name: 'HTML & CSS',
-        skill: 70,
+        skill: 80,
         imgPath: 'assets/img/technologies/HTML_CSS.webp'
       }
     ]
