@@ -16,9 +16,11 @@
       cursor: pointer;
     }
 
-    img {
+    svg {
       max-height: 100%;
       margin-right: 20px;
+      width: 50px;
+      color: var(--default-warm);
 
       &:hover {
         background-color: var(--default-secondary-main);
