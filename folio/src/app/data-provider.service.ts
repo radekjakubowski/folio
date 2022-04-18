@@ -96,7 +96,7 @@ export class DataProviderService {
     this.frameworks = [
       {
         name: 'Angular',
-        skill: 80,
+        skill: 85,
         imgPath: 'assets/img/technologies/Angular.webp'
       },
       {
@@ -106,7 +106,7 @@ export class DataProviderService {
       },
       {
         name: 'React',
-        skill: 40,
+        skill: 50,
         imgPath: 'assets/img/technologies/React.webp'
       }
     ];
@@ -114,22 +114,22 @@ export class DataProviderService {
     this.languages = [
       {
         name: 'C#',
-        skill: 70,
+        skill: 75,
         imgPath: 'assets/img/technologies/Csharp.webp'
       },
       {
         name: 'TypeScript',
-        skill: 70,
+        skill: 75,
         imgPath: 'assets/img/technologies/Typescript.webp'
       },
       {
         name: 'JavaScript',
-        skill: 70,
+        skill: 75,
         imgPath: 'assets/img/technologies/JavaScript.webp'
       },
       {
         name: 'SQL',
-        skill: 50,
+        skill: 60,
         imgPath: 'assets/img/technologies/SQL.webp'
       },
       {
