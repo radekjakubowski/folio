@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-theme-display',
@@ -23,6 +23,9 @@ export class ThemeDisplayComponent implements OnChanges {
 
   @Input()
   height: string;
+
+  @Input()
+  inThemeChoosing = false;
 
   public noInputParams = true;
 

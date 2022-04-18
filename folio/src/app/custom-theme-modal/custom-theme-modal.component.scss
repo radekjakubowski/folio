@@ -59,13 +59,14 @@
   .preview {
     grid-area: preview;
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     .color-preview {
       outline: 1px solid black;
-      height: 200px;
+      height: 100%;
       width: 75px;
 
       @media (max-width: #{$mobile-width}) {
