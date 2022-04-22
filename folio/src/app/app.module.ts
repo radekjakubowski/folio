@@ -16,7 +16,6 @@ import { ExperienceStepComponent } from './experience-step/experience-step.compo
 import { ExperienceComponent } from './experience/experience.component';
 import { SettingsBarComponent } from './settings-bar/settings-bar.component';
 import { SettingsModalComponent } from './settings-modal/settings-modal.component';
-import { NgxSkillBarModule } from 'ngx-skill-bar';
 import { HobbiesComponent } from './about/hobbies/hobbies.component';
 import { ThemeDisplayComponent } from './settings-modal/theme-display/theme-display.component';
 import { AnimatedSkillBarComponent } from './technologies/animated-skill-bar/animated-skill-bar.component';
@@ -53,7 +52,6 @@ export function createTranslateLoader(http: HttpClient) {
           deps: [HttpClient]
         }
     }),
-    NgxSkillBarModule,
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
