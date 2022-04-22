@@ -6,6 +6,7 @@
 }
 
 :root {
+  box-sizing: border-box;
   --default-main: #{$main};
   --default-secondary-main: #{$secondary-main};
   --default-cold: #{$cold};
@@ -62,6 +63,10 @@ body {
   &:hover {
     box-shadow: 0 5px 25px var(--default-secondary-main);
   }
+}
+
+.glow__no-hover {
+  box-shadow: 0 5px 25px var(--default-secondary-main);
 }
 
 .main {

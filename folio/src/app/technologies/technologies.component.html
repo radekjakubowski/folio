@@ -8,7 +8,7 @@
       <div class="framework" *ngFor="let framework of frameworks">
         <img [src]='framework.imgPath' [alt]='framework.name' [title]='framework.name'>
         <p>{{ framework.name }}</p>
-        <ngx-skill-bar [barWidth]="15" [percentage]='framework.skill' [numberOfBars]="5"></ngx-skill-bar>
+        <app-animated-skill-bar [skillLevel]="framework.skill"></app-animated-skill-bar>
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@
       <div class="language" *ngFor="let language of languages">
         <img [src]='language.imgPath' [alt]='language.name' [title]='language.name'>
         <p>{{ language.name }}</p>
-        <ngx-skill-bar [barWidth]="15" [percentage]='language.skill' [numberOfBars]="5"></ngx-skill-bar>
+        <app-animated-skill-bar [skillLevel]="language.skill"></app-animated-skill-bar>
       </div>
     </div>
   </div>

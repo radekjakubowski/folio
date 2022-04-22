@@ -1,0 +1,24 @@
+@import "../../../assets/utilities/_variables.scss";
+
+.bar-container {
+  cursor: default;
+  position: relative;
+  display: flex;
+  height: 20px;
+  border: 2px solid (var(--default-secondary-main));
+  border-radius: 5px;
+
+  .bar {
+    height: 100%;
+    background: var(--default-cold);
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .value {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: var(--default-main)
+  }
+}
