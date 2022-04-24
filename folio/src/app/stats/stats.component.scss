@@ -38,8 +38,6 @@
             color: var(--default-warm);
             font-size: x-large;
             text-align: center;
-            text-shadow:
-            1px 1px black;
 
             @media (max-width: #{$mobile-width}) {
                 font-size: medium;
@@ -50,9 +48,6 @@
             font-size: x-large;
             color: var(--default-secondary-main);
             text-align: center;
-            text-shadow:
-            1px 1px black,
-            2px 2px black;
 
             @media (max-width: #{$mobile-width}) {
                 font-size: medium;
