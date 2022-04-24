@@ -147,9 +147,7 @@
       text-align: center;
       font-size: x-large;
       color: var(--default-warm);
-      text-shadow:
-      1px 1px var(--default-secondary-main),
-      2px 2px black;
+      text-shadow: 1px 1px var(--default-secondary-main), 2px 2px var(--default-secondary-main), 3px 3px var(--default-secondary-main), 4px 4px black;
 
       @media (max-width: #{$mobile-width}) {
         font-size: medium;
