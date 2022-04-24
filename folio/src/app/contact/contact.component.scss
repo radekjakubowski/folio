@@ -23,6 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 10px;
 
     @media (max-width: #{$mobile-width}) {
       justify-content: center;
@@ -64,7 +65,8 @@
       background-color: var(--default-highlight-bg);
       margin-left: 5%;
       margin-right: 5%;
-      height: 3vh;
+      height: fit-content;
+      min-height: 25px;
       width: 40%;
       text-align: center;
       font-family: 'Main';
@@ -83,6 +85,7 @@
       6px 6px var(--default-highlight-bg),
       7px 7px black,
       inset 0 0 10px var(--default-secondary-main);
+      padding: 0 10px;
 
       @media (max-width: #{$mobile-width}) {
         width: 70%;

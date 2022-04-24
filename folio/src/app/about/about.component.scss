@@ -24,8 +24,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow:
-    1px 1px black;
 
     p {
       display: inline-block;
@@ -55,8 +53,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-shadow:
-    1px 1px black;
 
     p {
       white-space: normal;
@@ -92,8 +88,6 @@
       border-color: var(--default-secondary-main);
       border-radius: 10px;
       transition: 200ms;
-      text-shadow:
-      1px 1px black;
       box-shadow:
       1px 1px var(--default-secondary-main),
       2px 2px var(--default-secondary-main),
@@ -169,8 +163,6 @@
       text-decoration: underline;
       margin-top: 2em;
       font-size: smaller;
-      text-shadow:
-      1px 1px black;
 
       &:hover {
         cursor: pointer;

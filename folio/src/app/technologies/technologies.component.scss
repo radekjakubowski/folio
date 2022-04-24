@@ -17,6 +17,14 @@
     font-size: small;
   }
 
+  h1 {
+    text-shadow:
+      1px 1px var(--default-secondary-main),
+      2px 2px var(--default-secondary-main),
+      3px 3px var(--default-secondary-main),
+      4px 4px black;
+  }
+
   .settings {
     grid-area: settings;
   }
@@ -28,8 +36,6 @@
     align-items: center;
     justify-content: center;
     height: fit-content;
-    text-shadow:
-    1px 1px black;
 
     .frameworks-list {
       display: flex;
@@ -67,8 +73,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    text-shadow:
-    1px 1px black;
 
     @media (max-width: #{$mobile-width}) {
       flex-direction: start;

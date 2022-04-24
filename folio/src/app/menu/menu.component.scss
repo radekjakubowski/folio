@@ -11,13 +11,10 @@
     font-size: large;
     color: var(--default-warm);
     text-shadow:
-    1px 1px var(--default-secondary-main),
-    2px 2px var(--default-secondary-main),
-    3px 3px var(--default-secondary-main),
-    4px 4px var(--default-highlight-bg),
-    5px 5px var(--default-highlight-bg),
-    6px 6px var(--default-highlight-bg),
-    7px 7px black;
+      1px 1px var(--default-secondary-main),
+      2px 2px var(--default-secondary-main),
+      3px 3px var(--default-secondary-main),
+      4px 4px black;
 
     @media (max-width: #{$mobile-width}) {
       font-size: smaller;
@@ -84,16 +81,16 @@
       border-radius: 10px;
       transition: 200ms;
       text-shadow:
-      1px 1px black;
+        1px 1px black;
       box-shadow:
-      1px 1px var(--default-secondary-main),
-      2px 2px var(--default-secondary-main),
-      3px 3px var(--default-secondary-main),
-      4px 4px var(--default-highlight-bg),
-      5px 5px var(--default-highlight-bg),
-      6px 6px var(--default-highlight-bg),
-      7px 7px black,
-      inset 0 0 10px var(--default-secondary-main);
+        1px 1px var(--default-secondary-main),
+        2px 2px var(--default-secondary-main),
+        3px 3px var(--default-secondary-main),
+        4px 4px var(--default-highlight-bg),
+        5px 5px var(--default-highlight-bg),
+        6px 6px var(--default-highlight-bg),
+        7px 7px black,
+        inset 0 0 10px var(--default-secondary-main);
       animation: pulse-menu 3s ease-in-out infinite;
 
       @media (max-width: #{$mobile-width}) {
@@ -115,23 +112,27 @@
       box-shadow: 0 5px 15px 0px var(--default-secondary-main);
       transform: translatey(0px);
     }
+
     50% {
       box-shadow: 0 25px 15px 0px var(--default-cold);
       transform: translatey(-25px);
     }
+
     100% {
       box-shadow: 0 5px 15px 0px var(--default-secondary-main);
       transform: translatey(0px);
     }
   }
 
-@keyframes pulse-menu {
+  @keyframes pulse-menu {
     0% {
       transform: scale(1);
     }
+
     50% {
       transform: scale(1.005);
     }
+
     100% {
       transform: scale(1);
     }

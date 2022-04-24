@@ -68,5 +68,11 @@
   "Zastosuj": "Apply",
   "Stwórz własny motyw": "Create your own theme",
   "Twój własny motyw": "Your own theme applied!",
-  "Możesz pobrać aktualne CV tutaj": "You can download current CV here"
+  "Możesz pobrać aktualne CV tutaj": "You can download current CV here",
+  "Firma": "Company",
+  "Stanowisko": "Position",
+  "Opis": "Description",
+  "Lokalizacja": "Location",
+  "Okres czasu": "Time period",
+  "obecnie": "present"
 }

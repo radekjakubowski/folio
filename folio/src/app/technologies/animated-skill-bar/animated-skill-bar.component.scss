@@ -5,12 +5,14 @@
   position: relative;
   display: flex;
   height: 20px;
-  border: 2px solid (var(--default-secondary-main));
+  border: 2px solid (var(--default-warm));
   border-radius: 5px;
+  font-weight: normal;
+  text-shadow: 1px 1px black;
 
   .bar {
     height: 100%;
-    background: var(--default-cold);
+    background: var(--default-warm);
     overflow: hidden;
     text-align: center;
   }
@@ -19,6 +21,6 @@
     position: absolute;
     width: 100%;
     text-align: center;
-    color: var(--default-main)
+    color: var(--default-secondary-main)
   }
 }

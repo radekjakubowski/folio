@@ -1,14 +1,20 @@
 <div class="hoverable">
   <div class="step-info">
+      <span class="info-name">{{ 'Firma' | translate }}:</span>
       <div class="company-logo"><img [src]="stepInfo.imgPath"></div>
+      <span class="info-name">{{ 'Stanowisko' | translate }}:</span>
       <p class="name">{{stepInfo.name | translate}}</p>
+      <span class="info-name">{{ 'Opis' | translate}}:</span>
       <p class="description">{{stepInfo.description | translate}}</p>
+      <span class="info-name">{{ 'Lokalizacja' | translate }}:</span>
       <p class="location">{{stepInfo.city}}</p>
-      <div class="time-section">
-          <span class="time" *ngIf="isInFullExperience">
-              {{stepInfo.monthFrom | translate}} {{stepInfo.yearFrom}}
+      <div class="time-section" *ngIf="isInFullExperience">
+          <span class="info-name">{{ 'Okres czasu' | translate }}:</span>
+          <span class="time">
+               {{stepInfo.monthFrom | translate}} {{stepInfo.yearFrom}}
           </span>
-          <span class="time" *ngIf="isInFullExperience && !!stepInfo.monthTo">
+          <span *ngIf="!stepInfo.monthTo"> - {{ 'obecnie' | translate }}</span>
+          <span class="time" *ngIf="!!stepInfo.monthTo">
               - {{ stepInfo.monthTo | translate }} {{ stepInfo.yearTo }}
           </span>
       </div>
