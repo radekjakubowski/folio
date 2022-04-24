@@ -34,8 +34,9 @@
       text-align: center;
     }
 
-    h1 {
+    .swingy {
       animation: tilt ease-in-out 2s infinite;
+      text-shadow: 1px 1px var(--default-secondary-main), 2px 2px var(--default-secondary-main), 3px 3px var(--default-secondary-main), 4px 4px black;
     }
 
     a {

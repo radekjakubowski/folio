@@ -3,7 +3,7 @@
     <app-settings-bar></app-settings-bar>
   </div>
   <div class="frameworks">
-    <h1>{{'Frameworki' | translate }}</h1>
+    <h2>{{'Frameworki' | translate }}</h2>
     <div class="frameworks-list">
       <div class="framework" *ngFor="let framework of frameworks">
         <img [src]='framework.imgPath' [alt]='framework.name' [title]='framework.name'>
@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="languages">
-    <h1>{{ 'Języki' | translate }}</h1>
+    <h2>{{ 'Języki' | translate }}</h2>
     <div class="languages-list">
       <div class="language" *ngFor="let language of languages">
         <img [src]='language.imgPath' [alt]='language.name' [title]='language.name'>
