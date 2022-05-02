@@ -50,12 +50,12 @@
 body {
   background-image: url('../src/assets/img/regular-background.webp');
   background-color: var(--default-cold);
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
 
   @media (max-width: #{$mobile-width}) {
-    padding-right: 5vw;
-    padding-left: 5vw;
+    padding-right: 2px;
+    padding-left: 2px;
   }
 }
 
