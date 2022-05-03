@@ -1,5 +1,5 @@
 export interface Technology {
   name: string;
-  skill: number;
+  commerciallyProven: boolean;
   imgPath: string;
 }

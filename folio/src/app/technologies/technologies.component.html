@@ -3,21 +3,42 @@
     <app-settings-bar></app-settings-bar>
   </div>
   <div class="frameworks">
-    <h2>{{'Frameworki' | translate }}</h2>
+    <div class="legend"><ng-container *ngTemplateOutlet="checkMark"></ng-container>{{ 'Potwierdzony komercyjnie' | translate }}</div>
+    <h2 class="section-title">{{'Frameworki' | translate }}</h2>
     <div class="frameworks-list">
       <div class="framework" *ngFor="let framework of frameworks">
         <img [src]='framework.imgPath' [alt]='framework.name' [title]='framework.name'>
+        <div class="proof-stamp" *ngIf="framework.commerciallyProven"><ng-container *ngTemplateOutlet="checkMark"></ng-container></div>
         <p>{{ framework.name }}</p>
       </div>
     </div>
   </div>
   <div class="languages">
-    <h2>{{ 'Języki' | translate }}</h2>
+    <h2 class="section-title">{{ 'Języki' | translate }}</h2>
     <div class="languages-list">
       <div class="language" *ngFor="let language of languages">
         <img [src]='language.imgPath' [alt]='language.name' [title]='language.name'>
+        <div class="proof-stamp" *ngIf="language.commerciallyProven"><ng-container *ngTemplateOutlet="checkMark"></ng-container></div>
         <p>{{ language.name }}</p>
       </div>
     </div>
   </div>
 </div>
+
+<ng-template #checkMark>
+  <div class="check-mark">
+    <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+      y="0px" viewBox="0 0 32 32" xml:space="preserve">
+      <g>
+        <g id="check">
+          <g>
+            <polygon style="fill: currentColor;"
+              points="11.941,28.877 0,16.935 5.695,11.24 11.941,17.486 26.305,3.123 32,8.818 			" />
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+</ng-template>
+

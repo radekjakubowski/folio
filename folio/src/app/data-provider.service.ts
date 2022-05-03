@@ -96,17 +96,17 @@ export class DataProviderService {
     this.frameworks = [
       {
         name: 'Angular',
-        skill: 85,
+        commerciallyProven: true,
         imgPath: 'assets/img/technologies/Angular.webp'
       },
       {
         name: 'ASP.NET Core',
-        skill: 70,
+        commerciallyProven: false,
         imgPath: 'assets/img/technologies/NET_Core.webp'
       },
       {
         name: 'React',
-        skill: 50,
+        commerciallyProven: false,
         imgPath: 'assets/img/technologies/React.webp'
       }
     ];
@@ -114,27 +114,27 @@ export class DataProviderService {
     this.languages = [
       {
         name: 'C#',
-        skill: 75,
+        commerciallyProven: false,
         imgPath: 'assets/img/technologies/Csharp.webp'
       },
       {
         name: 'TypeScript',
-        skill: 75,
+        commerciallyProven: true,
         imgPath: 'assets/img/technologies/Typescript.webp'
       },
       {
         name: 'JavaScript',
-        skill: 75,
+        commerciallyProven: true,
         imgPath: 'assets/img/technologies/JavaScript.webp'
       },
       {
         name: 'SQL',
-        skill: 60,
+        commerciallyProven: false,
         imgPath: 'assets/img/technologies/SQL.webp'
       },
       {
         name: 'HTML & CSS',
-        skill: 80,
+        commerciallyProven: true,
         imgPath: 'assets/img/technologies/HTML_CSS.webp'
       }
     ]
