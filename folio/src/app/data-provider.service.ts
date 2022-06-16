@@ -101,20 +101,25 @@ export class DataProviderService {
       },
       {
         name: 'ASP.NET Core',
-        commerciallyProven: false,
+        commerciallyProven: true,
         imgPath: 'assets/img/technologies/NET_Core.webp'
       },
       {
         name: 'React',
         commerciallyProven: false,
         imgPath: 'assets/img/technologies/React.webp'
+      },
+      {
+        name: 'Blazor',
+        commerciallyProven: false,
+        imgPath: 'assets/img/technologies/Blazor.webp'
       }
     ];
 
     this.languages = [
       {
         name: 'C#',
-        commerciallyProven: false,
+        commerciallyProven: true,
         imgPath: 'assets/img/technologies/Csharp.webp'
       },
       {
@@ -129,7 +134,7 @@ export class DataProviderService {
       },
       {
         name: 'SQL',
-        commerciallyProven: false,
+        commerciallyProven: true,
         imgPath: 'assets/img/technologies/SQL.webp'
       },
       {
